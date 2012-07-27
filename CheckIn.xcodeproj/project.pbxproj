@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A523D2B15A98A400061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
+		0A523D2D15A98A400061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
+		0A523D2F15A98A400061997E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2E15A98A400061997E /* CoreGraphics.framework */; };
+		0A523D3515A98A400061997E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D3315A98A400061997E /* InfoPlist.strings */; };
+		0A523D3715A98A400061997E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D3615A98A400061997E /* main.m */; };
+		0A523D3B15A98A400061997E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D3A15A98A400061997E /* AppDelegate.m */; };
+		0A523D3E15A98A400061997E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D3C15A98A400061997E /* MainStoryboard.storyboard */; };
+		0A523D4115A98A400061997E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D4015A98A400061997E /* ViewController.m */; };
+		0A523D4915A98A410061997E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D4815A98A410061997E /* SenTestingKit.framework */; };
+		0A523D4A15A98A410061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
+		0A523D4B15A98A410061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
+		0A523D5315A98A410061997E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D5115A98A410061997E /* InfoPlist.strings */; };
+		0A523D5615A98A410061997E /* CheckInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D5515A98A410061997E /* CheckInTests.m */; };
+		0A523D6415A9D74C0061997E /* logo-lunatech.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6315A9D74C0061997E /* logo-lunatech.png */; };
+		0A523D6715A9D7F80061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6615A9D7F80061997E /* logo.png */; };
+		0A523D6915A9D8160061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6815A9D8160061997E /* logo.png */; };
+		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
+		0A523D7415AA04960061997E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D7315AA04960061997E /* Settings.bundle */; };
+		0A523D8215AA0F9A0061997E /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D8115AA0F9A0061997E /* sound.wav */; };
+		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
+		0ABA0C8C15AA1BE000099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8B15AA1BE000099C09 /* sound.caf */; };
+		0ABA0C8E15AA1BF800099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8D15AA1BF800099C09 /* sound.caf */; };
+		0ABA0C8F15AA1BF800099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8D15AA1BF800099C09 /* sound.caf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A523D4C15A98A410061997E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A523D1D15A98A400061997E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A523D2515A98A400061997E;
+			remoteInfo = HelloWorld2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A523D2C15A98A400061997E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A523D2E15A98A400061997E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A523D3215A98A400061997E /* CheckIn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckIn-Info.plist"; sourceTree = "<group>"; };
+		0A523D3415A98A400061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A523D3615A98A400061997E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A523D3815A98A400061997E /* CheckIn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckIn-Prefix.pch"; sourceTree = "<group>"; };
+		0A523D3915A98A400061997E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A523D3A15A98A400061997E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A523D3D15A98A400061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0A523D3F15A98A400061997E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0A523D4015A98A400061997E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A523D4715A98A410061997E /* CheckInTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A523D4815A98A410061997E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0A523D5015A98A410061997E /* CheckInTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckInTests-Info.plist"; sourceTree = "<group>"; };
+		0A523D5215A98A410061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A523D5415A98A410061997E /* CheckInTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckInTests.h; sourceTree = "<group>"; };
+		0A523D5515A98A410061997E /* CheckInTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckInTests.m; sourceTree = "<group>"; };
+		0A523D6315A9D74C0061997E /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lunatech.png"; path = "../../../../Desktop/logo-lunatech.png"; sourceTree = "<group>"; };
+		0A523D6615A9D7F80061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../Lunatech/logo.png; sourceTree = "<group>"; };
+		0A523D6815A9D8160061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0A523D6F15A9F6CD0061997E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0A523D7315AA04960061997E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0A523D8115AA0F9A0061997E /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0ABA0C8B15AA1BE000099C09 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		0ABA0C8D15AA1BF800099C09 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.caf; path = ../../../../Desktop/sound.caf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A523D2315A98A400061997E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */,
+				0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */,
+				0A523D2B15A98A400061997E /* UIKit.framework in Frameworks */,
+				0A523D2D15A98A400061997E /* Foundation.framework in Frameworks */,
+				0A523D2F15A98A400061997E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A523D4315A98A410061997E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D4915A98A410061997E /* SenTestingKit.framework in Frameworks */,
+				0A523D4A15A98A410061997E /* UIKit.framework in Frameworks */,
+				0A523D4B15A98A410061997E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A523D1B15A98A400061997E = {
+			isa = PBXGroup;
+			children = (
+				0A523D6815A9D8160061997E /* logo.png */,
+				0A523D6615A9D7F80061997E /* logo.png */,
+				0A523D3015A98A400061997E /* CheckIn */,
+				0A523D4E15A98A410061997E /* CheckInTests */,
+				0A523D2915A98A400061997E /* Frameworks */,
+				0A523D2715A98A400061997E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A523D2715A98A400061997E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A523D2615A98A400061997E /* CheckIn.app */,
+				0A523D4715A98A410061997E /* CheckInTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A523D2915A98A400061997E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A523D8915AA11090061997E /* AVFoundation.framework */,
+				0A523D6F15A9F6CD0061997E /* CoreLocation.framework */,
+				0A523D2A15A98A400061997E /* UIKit.framework */,
+				0A523D2C15A98A400061997E /* Foundation.framework */,
+				0A523D2E15A98A400061997E /* CoreGraphics.framework */,
+				0A523D4815A98A410061997E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A523D3015A98A400061997E /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+				0A523D3915A98A400061997E /* AppDelegate.h */,
+				0A523D3A15A98A400061997E /* AppDelegate.m */,
+				0A523D3C15A98A400061997E /* MainStoryboard.storyboard */,
+				0A523D3F15A98A400061997E /* ViewController.h */,
+				0A523D4015A98A400061997E /* ViewController.m */,
+				0A523D3115A98A400061997E /* Supporting Files */,
+			);
+			name = CheckIn;
+			path = HelloWorld2;
+			sourceTree = "<group>";
+		};
+		0A523D3115A98A400061997E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ABA0C8B15AA1BE000099C09 /* sound.caf */,
+				0A523D3215A98A400061997E /* CheckIn-Info.plist */,
+				0A523D3815A98A400061997E /* CheckIn-Prefix.pch */,
+				0A523D3315A98A400061997E /* InfoPlist.strings */,
+				0ABA0C8D15AA1BF800099C09 /* sound.caf */,
+				0A523D6315A9D74C0061997E /* logo-lunatech.png */,
+				0A523D3615A98A400061997E /* main.m */,
+				0A523D7315AA04960061997E /* Settings.bundle */,
+				0A523D8115AA0F9A0061997E /* sound.wav */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A523D4E15A98A410061997E /* CheckInTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A523D5415A98A410061997E /* CheckInTests.h */,
+				0A523D5515A98A410061997E /* CheckInTests.m */,
+				0A523D4F15A98A410061997E /* Supporting Files */,
+			);
+			name = CheckInTests;
+			path = HelloWorld2Tests;
+			sourceTree = "<group>";
+		};
+		0A523D4F15A98A410061997E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A523D5015A98A410061997E /* CheckInTests-Info.plist */,
+				0A523D5115A98A410061997E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A523D2515A98A400061997E /* CheckIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "CheckIn" */;
+			buildPhases = (
+				0A523D2215A98A400061997E /* Sources */,
+				0A523D2315A98A400061997E /* Frameworks */,
+				0A523D2415A98A400061997E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckIn;
+			productName = HelloWorld2;
+			productReference = 0A523D2615A98A400061997E /* CheckIn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A523D4615A98A410061997E /* CheckInTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A523D5C15A98A410061997E /* Build configuration list for PBXNativeTarget "CheckInTests" */;
+			buildPhases = (
+				0A523D4215A98A410061997E /* Sources */,
+				0A523D4315A98A410061997E /* Frameworks */,
+				0A523D4415A98A410061997E /* Resources */,
+				0A523D4515A98A410061997E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A523D4D15A98A410061997E /* PBXTargetDependency */,
+			);
+			name = CheckInTests;
+			productName = HelloWorld2Tests;
+			productReference = 0A523D4715A98A410061997E /* CheckInTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A523D1D15A98A400061997E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = com.lunatech;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 0A523D2015A98A400061997E /* Build configuration list for PBXProject "CheckIn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A523D1B15A98A400061997E;
+			productRefGroup = 0A523D2715A98A400061997E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A523D2515A98A400061997E /* CheckIn */,
+				0A523D4615A98A410061997E /* CheckInTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A523D2415A98A400061997E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D3515A98A400061997E /* InfoPlist.strings in Resources */,
+				0A523D3E15A98A400061997E /* MainStoryboard.storyboard in Resources */,
+				0A523D6415A9D74C0061997E /* logo-lunatech.png in Resources */,
+				0A523D6715A9D7F80061997E /* logo.png in Resources */,
+				0A523D6915A9D8160061997E /* logo.png in Resources */,
+				0A523D7415AA04960061997E /* Settings.bundle in Resources */,
+				0A523D8215AA0F9A0061997E /* sound.wav in Resources */,
+				0ABA0C8E15AA1BF800099C09 /* sound.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A523D4415A98A410061997E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D5315A98A410061997E /* InfoPlist.strings in Resources */,
+				0ABA0C8C15AA1BE000099C09 /* sound.caf in Resources */,
+				0ABA0C8F15AA1BF800099C09 /* sound.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A523D4515A98A410061997E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A523D2215A98A400061997E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D3715A98A400061997E /* main.m in Sources */,
+				0A523D3B15A98A400061997E /* AppDelegate.m in Sources */,
+				0A523D4115A98A400061997E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A523D4215A98A410061997E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A523D5615A98A410061997E /* CheckInTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A523D4D15A98A410061997E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A523D2515A98A400061997E /* CheckIn */;
+			targetProxy = 0A523D4C15A98A410061997E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A523D3315A98A400061997E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A523D3415A98A400061997E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A523D3C15A98A400061997E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A523D3D15A98A400061997E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		0A523D5115A98A410061997E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A523D5215A98A410061997E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A523D5715A98A410061997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A523D5815A98A410061997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A523D5A15A98A410061997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld2/CheckIn-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld2/CheckIn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A523D5B15A98A410061997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld2/CheckIn-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld2/CheckIn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0A523D5D15A98A410061997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloWorld2.app/HelloWorld2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld2/HelloWorld2-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld2Tests/CheckInTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0A523D5E15A98A410061997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HelloWorld2.app/HelloWorld2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloWorld2/HelloWorld2-Prefix.pch";
+				INFOPLIST_FILE = "HelloWorld2Tests/CheckInTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A523D2015A98A400061997E /* Build configuration list for PBXProject "CheckIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A523D5715A98A410061997E /* Debug */,
+				0A523D5815A98A410061997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "CheckIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A523D5A15A98A410061997E /* Debug */,
+				0A523D5B15A98A410061997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A523D5C15A98A410061997E /* Build configuration list for PBXNativeTarget "CheckInTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A523D5D15A98A410061997E /* Debug */,
+				0A523D5E15A98A410061997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A523D1D15A98A400061997E /* Project object */;
+}
