@@ -16,6 +16,7 @@
 		0A29257916318BA500E00CFE /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256F16318BA500E00CFE /* sound.caf */; };
 		0A29257A16318BA500E00CFE /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A29257016318BA500E00CFE /* sound.wav */; };
 		0A29257B16318BA500E00CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29257216318BA500E00CFE /* ViewController.m */; };
+		0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29257D16318FA000E00CFE /* logo-lunatech.png */; };
 		0A523D2B15A98A400061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D2D15A98A400061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
 		0A523D2F15A98A400061997E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2E15A98A400061997E /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		0A523D4A15A98A410061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D4B15A98A410061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
 		0A523D6715A9D7F80061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6615A9D7F80061997E /* logo.png */; };
-		0A523D6915A9D8160061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6815A9D8160061997E /* logo.png */; };
 		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
 		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,7 @@
 		0A29257016318BA500E00CFE /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		0A29257116318BA500E00CFE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A29257216318BA500E00CFE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A29257D16318FA000E00CFE /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-lunatech.png"; sourceTree = "<group>"; };
 		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A523D2C15A98A400061997E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,7 +59,6 @@
 		0A523D4715A98A410061997E /* CheckInTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D4815A98A410061997E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A523D6615A9D7F80061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../Lunatech/logo.png; sourceTree = "<group>"; };
-		0A523D6815A9D8160061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0A523D6F15A9F6CD0061997E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 		0A523D1B15A98A400061997E = {
 			isa = PBXGroup;
 			children = (
-				0A523D6815A9D8160061997E /* logo.png */,
+				0A29257D16318FA000E00CFE /* logo-lunatech.png */,
 				0A523D6615A9D7F80061997E /* logo.png */,
 				0A29256416318BA500E00CFE /* Classes */,
 				0A523D2915A98A400061997E /* Frameworks */,
@@ -221,13 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A523D6715A9D7F80061997E /* logo.png in Resources */,
-				0A523D6915A9D8160061997E /* logo.png in Resources */,
 				0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */,
 				0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */,
 				0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */,
 				0A29257816318BA500E00CFE /* Settings.bundle in Resources */,
 				0A29257916318BA500E00CFE /* sound.caf in Resources */,
 				0A29257A16318BA500E00CFE /* sound.wav in Resources */,
+				0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

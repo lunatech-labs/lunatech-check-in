@@ -103,7 +103,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-lunatech.png" width="2834" height="1380"/>
+        <image name="logo-lunatech.png" width="1417" height="690"/>
     </resources>
     <classes>
         <class className="AppDelegate" superclassName="UIResponder">
