@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A29257316318BA500E00CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29256616318BA500E00CFE /* AppDelegate.m */; };
+		0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256716318BA500E00CFE /* CheckIn-Info.plist */; };
+		0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256916318BA500E00CFE /* InfoPlist.strings */; };
+		0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */; };
+		0A29257716318BA500E00CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29256D16318BA500E00CFE /* main.m */; };
+		0A29257816318BA500E00CFE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256E16318BA500E00CFE /* Settings.bundle */; };
+		0A29257916318BA500E00CFE /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256F16318BA500E00CFE /* sound.caf */; };
+		0A29257A16318BA500E00CFE /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A29257016318BA500E00CFE /* sound.wav */; };
+		0A29257B16318BA500E00CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29257216318BA500E00CFE /* ViewController.m */; };
 		0A523D2B15A98A400061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D2D15A98A400061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
 		0A523D2F15A98A400061997E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2E15A98A400061997E /* CoreGraphics.framework */; };
-		0A523D3515A98A400061997E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D3315A98A400061997E /* InfoPlist.strings */; };
-		0A523D3715A98A400061997E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D3615A98A400061997E /* main.m */; };
-		0A523D3B15A98A400061997E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D3A15A98A400061997E /* AppDelegate.m */; };
-		0A523D3E15A98A400061997E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D3C15A98A400061997E /* MainStoryboard.storyboard */; };
-		0A523D4115A98A400061997E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D4015A98A400061997E /* ViewController.m */; };
 		0A523D4915A98A410061997E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D4815A98A410061997E /* SenTestingKit.framework */; };
 		0A523D4A15A98A410061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D4B15A98A410061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
-		0A523D5315A98A410061997E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D5115A98A410061997E /* InfoPlist.strings */; };
-		0A523D5615A98A410061997E /* CheckInTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A523D5515A98A410061997E /* CheckInTests.m */; };
-		0A523D6415A9D74C0061997E /* logo-lunatech.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6315A9D74C0061997E /* logo-lunatech.png */; };
 		0A523D6715A9D7F80061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6615A9D7F80061997E /* logo.png */; };
 		0A523D6915A9D8160061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6815A9D8160061997E /* logo.png */; };
 		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
-		0A523D7415AA04960061997E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D7315AA04960061997E /* Settings.bundle */; };
-		0A523D8215AA0F9A0061997E /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D8115AA0F9A0061997E /* sound.wav */; };
 		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
-		0ABA0C8C15AA1BE000099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8B15AA1BE000099C09 /* sound.caf */; };
-		0ABA0C8E15AA1BF800099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8D15AA1BF800099C09 /* sound.caf */; };
-		0ABA0C8F15AA1BF800099C09 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA0C8D15AA1BF800099C09 /* sound.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,34 +39,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A29256516318BA500E00CFE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A29256616318BA500E00CFE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A29256716318BA500E00CFE /* CheckIn-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CheckIn-Info.plist"; sourceTree = "<group>"; };
+		0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CheckIn-Prefix.pch"; sourceTree = "<group>"; };
+		0A29256A16318BA500E00CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A29256C16318BA500E00CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0A29256D16318BA500E00CFE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A29256E16318BA500E00CFE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		0A29256F16318BA500E00CFE /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		0A29257016318BA500E00CFE /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		0A29257116318BA500E00CFE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0A29257216318BA500E00CFE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A523D2C15A98A400061997E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A523D2E15A98A400061997E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0A523D3215A98A400061997E /* CheckIn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckIn-Info.plist"; sourceTree = "<group>"; };
-		0A523D3415A98A400061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0A523D3615A98A400061997E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A523D3815A98A400061997E /* CheckIn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckIn-Prefix.pch"; sourceTree = "<group>"; };
-		0A523D3915A98A400061997E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0A523D3A15A98A400061997E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A523D3D15A98A400061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0A523D3F15A98A400061997E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A523D4015A98A400061997E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A523D4715A98A410061997E /* CheckInTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D4815A98A410061997E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0A523D5015A98A410061997E /* CheckInTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckInTests-Info.plist"; sourceTree = "<group>"; };
-		0A523D5215A98A410061997E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0A523D5415A98A410061997E /* CheckInTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckInTests.h; sourceTree = "<group>"; };
-		0A523D5515A98A410061997E /* CheckInTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckInTests.m; sourceTree = "<group>"; };
-		0A523D6315A9D74C0061997E /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lunatech.png"; path = "../../../../Desktop/logo-lunatech.png"; sourceTree = "<group>"; };
 		0A523D6615A9D7F80061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../Lunatech/logo.png; sourceTree = "<group>"; };
 		0A523D6815A9D8160061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0A523D6F15A9F6CD0061997E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		0A523D7315AA04960061997E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		0A523D8115AA0F9A0061997E /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		0ABA0C8B15AA1BE000099C09 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
-		0ABA0C8D15AA1BF800099C09 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.caf; path = ../../../../Desktop/sound.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +89,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A29256416318BA500E00CFE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A29257C16318BD100E00CFE /* Supporting Files */,
+				0A29256516318BA500E00CFE /* AppDelegate.h */,
+				0A29256616318BA500E00CFE /* AppDelegate.m */,
+				0A29256F16318BA500E00CFE /* sound.caf */,
+				0A29257016318BA500E00CFE /* sound.wav */,
+				0A29257116318BA500E00CFE /* ViewController.h */,
+				0A29257216318BA500E00CFE /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A29257C16318BD100E00CFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A29256716318BA500E00CFE /* CheckIn-Info.plist */,
+				0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */,
+				0A29256916318BA500E00CFE /* InfoPlist.strings */,
+				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
+				0A29256D16318BA500E00CFE /* main.m */,
+				0A29256E16318BA500E00CFE /* Settings.bundle */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		0A523D1B15A98A400061997E = {
 			isa = PBXGroup;
 			children = (
 				0A523D6815A9D8160061997E /* logo.png */,
 				0A523D6615A9D7F80061997E /* logo.png */,
-				0A523D3015A98A400061997E /* CheckIn */,
-				0A523D4E15A98A410061997E /* CheckInTests */,
+				0A29256416318BA500E00CFE /* Classes */,
 				0A523D2915A98A400061997E /* Frameworks */,
 				0A523D2715A98A400061997E /* Products */,
 			);
@@ -131,56 +147,6 @@
 				0A523D4815A98A410061997E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0A523D3015A98A400061997E /* CheckIn */ = {
-			isa = PBXGroup;
-			children = (
-				0A523D3915A98A400061997E /* AppDelegate.h */,
-				0A523D3A15A98A400061997E /* AppDelegate.m */,
-				0A523D3C15A98A400061997E /* MainStoryboard.storyboard */,
-				0A523D3F15A98A400061997E /* ViewController.h */,
-				0A523D4015A98A400061997E /* ViewController.m */,
-				0A523D3115A98A400061997E /* Supporting Files */,
-			);
-			name = CheckIn;
-			path = HelloWorld2;
-			sourceTree = "<group>";
-		};
-		0A523D3115A98A400061997E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0ABA0C8B15AA1BE000099C09 /* sound.caf */,
-				0A523D3215A98A400061997E /* CheckIn-Info.plist */,
-				0A523D3815A98A400061997E /* CheckIn-Prefix.pch */,
-				0A523D3315A98A400061997E /* InfoPlist.strings */,
-				0ABA0C8D15AA1BF800099C09 /* sound.caf */,
-				0A523D6315A9D74C0061997E /* logo-lunatech.png */,
-				0A523D3615A98A400061997E /* main.m */,
-				0A523D7315AA04960061997E /* Settings.bundle */,
-				0A523D8115AA0F9A0061997E /* sound.wav */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		0A523D4E15A98A410061997E /* CheckInTests */ = {
-			isa = PBXGroup;
-			children = (
-				0A523D5415A98A410061997E /* CheckInTests.h */,
-				0A523D5515A98A410061997E /* CheckInTests.m */,
-				0A523D4F15A98A410061997E /* Supporting Files */,
-			);
-			name = CheckInTests;
-			path = HelloWorld2Tests;
-			sourceTree = "<group>";
-		};
-		0A523D4F15A98A410061997E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0A523D5015A98A410061997E /* CheckInTests-Info.plist */,
-				0A523D5115A98A410061997E /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,14 +220,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A523D3515A98A400061997E /* InfoPlist.strings in Resources */,
-				0A523D3E15A98A400061997E /* MainStoryboard.storyboard in Resources */,
-				0A523D6415A9D74C0061997E /* logo-lunatech.png in Resources */,
 				0A523D6715A9D7F80061997E /* logo.png in Resources */,
 				0A523D6915A9D8160061997E /* logo.png in Resources */,
-				0A523D7415AA04960061997E /* Settings.bundle in Resources */,
-				0A523D8215AA0F9A0061997E /* sound.wav in Resources */,
-				0ABA0C8E15AA1BF800099C09 /* sound.caf in Resources */,
+				0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */,
+				0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */,
+				0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */,
+				0A29257816318BA500E00CFE /* Settings.bundle in Resources */,
+				0A29257916318BA500E00CFE /* sound.caf in Resources */,
+				0A29257A16318BA500E00CFE /* sound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A523D5315A98A410061997E /* InfoPlist.strings in Resources */,
-				0ABA0C8C15AA1BE000099C09 /* sound.caf in Resources */,
-				0ABA0C8F15AA1BF800099C09 /* sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A523D3715A98A400061997E /* main.m in Sources */,
-				0A523D3B15A98A400061997E /* AppDelegate.m in Sources */,
-				0A523D4115A98A400061997E /* ViewController.m in Sources */,
+				0A29257316318BA500E00CFE /* AppDelegate.m in Sources */,
+				0A29257716318BA500E00CFE /* main.m in Sources */,
+				0A29257B16318BA500E00CFE /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A523D5615A98A410061997E /* CheckInTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,28 +285,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0A523D3315A98A400061997E /* InfoPlist.strings */ = {
+		0A29256916318BA500E00CFE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0A523D3415A98A400061997E /* en */,
+				0A29256A16318BA500E00CFE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0A523D3C15A98A400061997E /* MainStoryboard.storyboard */ = {
+		0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0A523D3D15A98A400061997E /* en */,
+				0A29256C16318BA500E00CFE /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		0A523D5115A98A410061997E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A523D5215A98A410061997E /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -399,8 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorld2/CheckIn-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorld2/CheckIn-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -410,8 +365,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloWorld2/CheckIn-Prefix.pch";
-				INFOPLIST_FILE = "HelloWorld2/CheckIn-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
