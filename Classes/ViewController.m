@@ -22,7 +22,8 @@
      self.username = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.text = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.delegate = self;
-     isCheckin =  @"Welcome! Tap to log in.";
+     if (!isCheckin)
+         isCheckin =  @"Welcome! Tap to enter your email.";
      [self updateStatusLabel: isCheckin];
 }
 

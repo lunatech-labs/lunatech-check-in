@@ -107,13 +107,14 @@
 {
     
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
-    
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     if ([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive) {
         UILocalNotification *reminder = [[UILocalNotification alloc] init];
         [reminder setFireDate:[NSDate date]];
         [reminder setTimeZone:[NSTimeZone localTimeZone]];
         [reminder setHasAction:YES];
         [reminder setAlertAction:@"Show"];
+        [reminder setSoundName: @"sound.caf"];
         [reminder setAlertBody:[NSString stringWithFormat:@" %@ is entering the Lunatech Office!", username] ];
         [[UIApplication sharedApplication] scheduleLocalNotification:reminder];
     } else {
@@ -146,6 +147,7 @@
         [reminder setFireDate:[NSDate date]];
         [reminder setTimeZone:[NSTimeZone localTimeZone]];
         [reminder setHasAction:YES];
+        [reminder setSoundName: @"sound.caf"];
         [reminder setAlertAction:@"Show"];
         [reminder setAlertBody:@"Connection to server failed!"];
         [[UIApplication sharedApplication] scheduleLocalNotification:reminder];
@@ -160,6 +162,7 @@
 - (void) exitedRegion
 {
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
     if ([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive) {
         UILocalNotification *reminder = [[UILocalNotification alloc] init];
@@ -167,16 +170,17 @@
         [reminder setTimeZone:[NSTimeZone localTimeZone]];
         [reminder setHasAction:YES];
         [reminder setAlertAction:@"Show"];
+        [reminder setSoundName: @"sound.caf"];
         [reminder setAlertBody:[NSString stringWithFormat:@" %@ is out of the Lunatech Office!", username] ];
         [[UIApplication sharedApplication] scheduleLocalNotification:reminder];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
             // Show an alert or otherwise notify the user
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Info"
-                                                            message:[NSString stringWithFormat:@" %@ is out of the Lunatech Office!", username]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles: nil];
+                                                      message:[NSString stringWithFormat:@" %@ is out of the Lunatech Office!", username]
+                                                      delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles: nil];
             [alert show];
         });
     }
@@ -198,6 +202,7 @@
         [reminder setFireDate:[NSDate date]];
         [reminder setTimeZone:[NSTimeZone localTimeZone]];
         [reminder setHasAction:YES];
+        [reminder setSoundName: @"sound.caf"];
         [reminder setAlertAction:@"Show"];
         [reminder setAlertBody:@"Connection to server failed!"];
         [[UIApplication sharedApplication] scheduleLocalNotification:reminder];

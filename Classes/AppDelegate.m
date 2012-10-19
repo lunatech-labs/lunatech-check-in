@@ -22,7 +22,7 @@
         viewController = (ViewController*) self.window.rootViewController;
     }
     [[Geofencer sharedFencer] startMonitoring];
-
+    [[Geofencer sharedFencer] setDelegate:viewController];
     return YES;
 }
 

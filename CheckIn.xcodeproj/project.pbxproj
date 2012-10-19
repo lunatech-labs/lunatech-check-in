@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0F343C1631D6FB0036C681 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F343B1631D6FB0036C681 /* logo.png */; };
+		0A0F343F1631D7430036C681 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F343E1631D7430036C681 /* Default@2x.png */; };
+		0A0F34411631D74A0036C681 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F34401631D74A0036C681 /* Default-568h@2x.png */; };
+		0A0F34431631D74F0036C681 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F34421631D74F0036C681 /* Default.png */; };
 		0A29257316318BA500E00CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29256616318BA500E00CFE /* AppDelegate.m */; };
 		0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256716318BA500E00CFE /* CheckIn-Info.plist */; };
 		0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256916318BA500E00CFE /* InfoPlist.strings */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0F343B1631D6FB0036C681 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0A0F343E1631D7430036C681 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0A0F34401631D74A0036C681 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0A0F34421631D74F0036C681 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0A29256516318BA500E00CFE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A29256616318BA500E00CFE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0A29256716318BA500E00CFE /* CheckIn-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CheckIn-Info.plist"; sourceTree = "<group>"; };
@@ -123,6 +131,9 @@
 		0A523D1B15A98A400061997E = {
 			isa = PBXGroup;
 			children = (
+				0A0F34421631D74F0036C681 /* Default.png */,
+				0A0F34401631D74A0036C681 /* Default-568h@2x.png */,
+				0A0F343E1631D7430036C681 /* Default@2x.png */,
 				0A29256416318BA500E00CFE /* Classes */,
 				0A523D2915A98A400061997E /* Frameworks */,
 				0A523D2715A98A400061997E /* Products */,
@@ -155,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C335B6D51631A6F5003F69E9 /* background.png */,
+				0A0F343B1631D6FB0036C681 /* logo.png */,
 				0A29256F16318BA500E00CFE /* sound.caf */,
 				0A29257016318BA500E00CFE /* sound.wav */,
 				0A29257D16318FA000E00CFE /* logo-lunatech.png */,
@@ -241,6 +253,10 @@
 				0A29257A16318BA500E00CFE /* sound.wav in Resources */,
 				0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */,
 				C335B6D61631A6F5003F69E9 /* background.png in Resources */,
+				0A0F343C1631D6FB0036C681 /* logo.png in Resources */,
+				0A0F343F1631D7430036C681 /* Default@2x.png in Resources */,
+				0A0F34411631D74A0036C681 /* Default-568h@2x.png in Resources */,
+				0A0F34431631D74F0036C681 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
