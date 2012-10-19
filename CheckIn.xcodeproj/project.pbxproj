@@ -23,9 +23,10 @@
 		0A523D4915A98A410061997E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D4815A98A410061997E /* SenTestingKit.framework */; };
 		0A523D4A15A98A410061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D4B15A98A410061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
-		0A523D6715A9D7F80061997E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A523D6615A9D7F80061997E /* logo.png */; };
 		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
 		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
+		C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B6CF163198D8003F69E9 /* Geofencer.m */; };
+		C335B6D61631A6F5003F69E9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C335B6D51631A6F5003F69E9 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +52,18 @@
 		0A29257016318BA500E00CFE /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		0A29257116318BA500E00CFE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0A29257216318BA500E00CFE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0A29257D16318FA000E00CFE /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-lunatech.png"; sourceTree = "<group>"; };
+		0A29257D16318FA000E00CFE /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lunatech.png"; path = "../logo-lunatech.png"; sourceTree = "<group>"; };
 		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A523D2C15A98A400061997E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A523D2E15A98A400061997E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0A523D4715A98A410061997E /* CheckInTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckInTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D4815A98A410061997E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0A523D6615A9D7F80061997E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../Lunatech/logo.png; sourceTree = "<group>"; };
 		0A523D6F15A9F6CD0061997E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C335B6CE163198D8003F69E9 /* Geofencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geofencer.h; sourceTree = "<group>"; };
+		C335B6CF163198D8003F69E9 /* Geofencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geofencer.m; sourceTree = "<group>"; };
+		C335B6D51631A6F5003F69E9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +95,15 @@
 		0A29256416318BA500E00CFE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0A29257C16318BD100E00CFE /* Supporting Files */,
+				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
 				0A29256516318BA500E00CFE /* AppDelegate.h */,
 				0A29256616318BA500E00CFE /* AppDelegate.m */,
-				0A29256F16318BA500E00CFE /* sound.caf */,
-				0A29257016318BA500E00CFE /* sound.wav */,
 				0A29257116318BA500E00CFE /* ViewController.h */,
 				0A29257216318BA500E00CFE /* ViewController.m */,
+				C335B6CE163198D8003F69E9 /* Geofencer.h */,
+				C335B6CF163198D8003F69E9 /* Geofencer.m */,
+				0A29257C16318BD100E00CFE /* Supporting Files */,
+				C335B6CD163196FC003F69E9 /* Resources */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -109,7 +114,6 @@
 				0A29256716318BA500E00CFE /* CheckIn-Info.plist */,
 				0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */,
 				0A29256916318BA500E00CFE /* InfoPlist.strings */,
-				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
 				0A29256D16318BA500E00CFE /* main.m */,
 				0A29256E16318BA500E00CFE /* Settings.bundle */,
 			);
@@ -119,8 +123,6 @@
 		0A523D1B15A98A400061997E = {
 			isa = PBXGroup;
 			children = (
-				0A29257D16318FA000E00CFE /* logo-lunatech.png */,
-				0A523D6615A9D7F80061997E /* logo.png */,
 				0A29256416318BA500E00CFE /* Classes */,
 				0A523D2915A98A400061997E /* Frameworks */,
 				0A523D2715A98A400061997E /* Products */,
@@ -147,6 +149,17 @@
 				0A523D4815A98A410061997E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C335B6CD163196FC003F69E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C335B6D51631A6F5003F69E9 /* background.png */,
+				0A29256F16318BA500E00CFE /* sound.caf */,
+				0A29257016318BA500E00CFE /* sound.wav */,
+				0A29257D16318FA000E00CFE /* logo-lunatech.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A523D6715A9D7F80061997E /* logo.png in Resources */,
 				0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */,
 				0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */,
 				0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */,
@@ -228,6 +240,7 @@
 				0A29257916318BA500E00CFE /* sound.caf in Resources */,
 				0A29257A16318BA500E00CFE /* sound.wav in Resources */,
 				0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */,
+				C335B6D61631A6F5003F69E9 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +277,7 @@
 				0A29257316318BA500E00CFE /* AppDelegate.m in Sources */,
 				0A29257716318BA500E00CFE /* main.m in Sources */,
 				0A29257B16318BA500E00CFE /* ViewController.m in Sources */,
+				C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +366,7 @@
 		0A523D5A15A98A410061997E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";
@@ -364,6 +379,7 @@
 		0A523D5B15A98A410061997E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";

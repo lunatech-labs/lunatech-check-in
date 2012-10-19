@@ -13,17 +13,16 @@
 @end
 
 @implementation ViewController
-@synthesize textField = _textField;
-@synthesize status = _status;
-@synthesize username = _username;
 
-NSString *isCheckin;
+
 
 - (void)loadView
 {
      [super loadView];
      self.username = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.text = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+     self.textField.delegate = self;
+     isCheckin =  @"Welcome! Tap to log in.";
      [self updateStatusLabel: isCheckin];
 }
 
@@ -33,17 +32,26 @@ NSString *isCheckin;
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [_textField resignFirstResponder];
+    [_textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)changeGreetings:(id)sender {
-    NSString *name = self.username;
-    if ([name length] == 0) {
-        name = @"Unknown user ";
-    }
+    NSString *name = self.textField.text;
+
     // Save our user
     [[NSUserDefaults standardUserDefaults] setObject: name forKey:@"email_preferences"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+
     self.username = name;
     self.textField.text = name;
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)locationUpdated:(NSString *)newLocation {
+    [self updateStatusLabel:newLocation];
 }
 
 - (void) updateStatusLabel:(NSString *)parameter {
@@ -51,6 +59,8 @@ NSString *isCheckin;
     NSLog(@"updateStatusLabel: %@", parameter);
     self.status.text = parameter;
     isCheckin = parameter;
+    
+    
     [self.view setNeedsDisplay];//edit
 }
 
