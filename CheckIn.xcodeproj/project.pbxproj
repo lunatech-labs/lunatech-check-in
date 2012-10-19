@@ -26,6 +26,7 @@
 		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
 		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
 		C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B6CF163198D8003F69E9 /* Geofencer.m */; };
+		C335B6D61631A6F5003F69E9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C335B6D51631A6F5003F69E9 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C335B6CE163198D8003F69E9 /* Geofencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geofencer.h; sourceTree = "<group>"; };
 		C335B6CF163198D8003F69E9 /* Geofencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geofencer.m; sourceTree = "<group>"; };
+		C335B6D51631A6F5003F69E9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		C335B6CD163196FC003F69E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C335B6D51631A6F5003F69E9 /* background.png */,
 				0A29256F16318BA500E00CFE /* sound.caf */,
 				0A29257016318BA500E00CFE /* sound.wav */,
 				0A29257D16318FA000E00CFE /* logo-lunatech.png */,
@@ -237,6 +240,7 @@
 				0A29257916318BA500E00CFE /* sound.caf in Resources */,
 				0A29257A16318BA500E00CFE /* sound.wav in Resources */,
 				0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */,
+				C335B6D61631A6F5003F69E9 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

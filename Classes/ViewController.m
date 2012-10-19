@@ -22,6 +22,7 @@
      self.username = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.text = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.delegate = self;
+     isCheckin =  @"Welcome! Tap to log in.";
      [self updateStatusLabel: isCheckin];
 }
 
@@ -40,7 +41,7 @@
 - (IBAction)changeGreetings:(id)sender {
     NSString *name = self.username;
     if ([name length] == 0) {
-        name = @"Unknown user ";
+        name = @"Your email adress ";
     }
     // Save our user
     [[NSUserDefaults standardUserDefaults] setObject: name forKey:@"email_preferences"];
@@ -48,6 +49,8 @@
     
     self.username = name;
     self.textField.text = name;
+    NSLog(@"IBAction");
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)locationUpdated:(NSString *)newLocation {
