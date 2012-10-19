@@ -39,17 +39,14 @@
 }
 
 - (IBAction)changeGreetings:(id)sender {
-    NSString *name = self.username;
-    if ([name length] == 0) {
-        name = @"Your email adress ";
-    }
+    NSString *name = self.textField.text;
+
     // Save our user
     [[NSUserDefaults standardUserDefaults] setObject: name forKey:@"email_preferences"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+
     self.username = name;
     self.textField.text = name;
-    NSLog(@"IBAction");
     [self dismissModalViewControllerAnimated:YES];
 }
 
