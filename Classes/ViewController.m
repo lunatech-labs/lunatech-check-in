@@ -50,6 +50,10 @@
     self.textField.text = name;
 }
 
+- (void)locationUpdated:(NSString *)newLocation {
+    [self updateStatusLabel:newLocation];
+}
+
 - (void) updateStatusLabel:(NSString *)parameter {
     
     NSLog(@"updateStatusLabel: %@", parameter);

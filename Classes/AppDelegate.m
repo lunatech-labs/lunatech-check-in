@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "Geofencer.h"
 
 @implementation AppDelegate
 
@@ -18,11 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[Geofencer sharedFencer] startMonitoring];
 
     if (!viewController) {
         viewController = (ViewController*) self.window.rootViewController;
     }
+    [[Geofencer sharedFencer] startMonitoring];
+
     return YES;
 }
 

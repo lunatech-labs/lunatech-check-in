@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController <UITextFieldDelegate>{
+
+
+
+@interface ViewController : UIViewController <UITextFieldDelegate, LocationUpdaterDelegate>{
     NSString *isCheckin;
 }
 

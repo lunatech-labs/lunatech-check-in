@@ -9,6 +9,8 @@
 #import "Geofencer.h"
 
 @implementation Geofencer
+@synthesize delegate;
+
 
 + (id) sharedFencer
 {
@@ -30,6 +32,15 @@
     return self;    
 }
 
+#pragma mark -
+#pragma mark protocol methods
+
+-(void)locationUpdated:(NSString*) newLocation {
+
+    //check foor delegate using instances
+    if([delegate respondsToSelector:@selector(locationUpdated:)])
+        [delegate locationUpdated:newLocation];
+}
 
 #pragma mark -
 #pragma mark locationManager delegation
@@ -143,7 +154,7 @@
     
     NSString *greeting = [[NSString alloc] initWithFormat:@"%@ is in the office", username];
     //[viewController updateStatusLabel:greeting];
-    NSLog(@"%@",greeting);
+    [self locationUpdated:greeting];
 }
 
 - (void) exitedRegion
@@ -196,7 +207,7 @@
     
     NSString *greeting = [[NSString alloc] initWithFormat:@"%@ is out of the office", username];
     //[viewController updateStatusLabel:greeting];
-    NSLog(@"%@",greeting);
+    [self locationUpdated:greeting];
 }
 
 
