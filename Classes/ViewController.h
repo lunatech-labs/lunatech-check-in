@@ -10,9 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface ViewController : UIViewController <UITextFieldDelegate>{
-    IBOutlet UILabel * status;
-    IBOutlet UITextField * textField;
-   
+    NSString *isCheckin;
 }
 
 @property (retain, nonatomic) IBOutlet UITextField * textField;

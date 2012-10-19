@@ -12,14 +12,10 @@
 @class ViewController;
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate> {
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
     ViewController *viewController;
-    CLLocationManager *regionManager;
     
 }
-
--(void) enteredRegion;
--(void) exitedRegion;
 
 @property (nonatomic, strong) IBOutlet ViewController *viewController;
 

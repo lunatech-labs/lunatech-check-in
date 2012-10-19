@@ -13,17 +13,15 @@
 @end
 
 @implementation ViewController
-@synthesize textField = _textField;
-@synthesize status = _status;
-@synthesize username = _username;
 
-NSString *isCheckin;
+
 
 - (void)loadView
 {
      [super loadView];
      self.username = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.text = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+     self.textField.delegate = self;
      [self updateStatusLabel: isCheckin];
 }
 
@@ -31,6 +29,12 @@ NSString *isCheckin;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [_textField resignFirstResponder];
+    [_textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)changeGreetings:(id)sender {
@@ -51,6 +55,8 @@ NSString *isCheckin;
     NSLog(@"updateStatusLabel: %@", parameter);
     self.status.text = parameter;
     isCheckin = parameter;
+    
+    
     [self.view setNeedsDisplay];//edit
 }
 
