@@ -22,6 +22,7 @@
 
 
 - (IBAction)changeGreetings:(id)sender;
+- (IBAction)reloadLocationService:(id)sender;
 - (void) updateStatusLabel:(NSString *)parameter;
 
 @end

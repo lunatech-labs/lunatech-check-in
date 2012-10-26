@@ -11,6 +11,7 @@
 @implementation Geofencer
 @synthesize delegate;
 
+#define kRegionLunatechOffice [[CLRegion alloc] initCircularRegionWithCenter:CLLocationCoordinate2DMake(51.919606, 4.456255) radius:30.0 identifier:@"Lunatech Labs"]
 
 + (id) sharedFencer
 {
@@ -47,19 +48,17 @@
 
 - (void) startMonitoring
 {
-
-    
-    CLLocationCoordinate2D lunaLatLong = CLLocationCoordinate2DMake(51.919606, 4.456255);
-    CLRegion *lunatech = [[CLRegion alloc]
-                          initCircularRegionWithCenter:lunaLatLong
-                          radius: 30.0
-                          identifier:@"Lunatech Labs"];
     
     // Start monitoring for our CLRegion using best accuracy
-    [regionManager startMonitoringForRegion:lunatech desiredAccuracy:kCLLocationAccuracyBest];
+    [regionManager startMonitoringForRegion:kRegionLunatechOffice desiredAccuracy:kCLLocationAccuracyBest];
     NSLog(@" - Starting Region Monitoring ");    
 }
 
+- (void) stopMonitoring
+{
+    [regionManager stopMonitoringForRegion:kRegionLunatechOffice];
+    NSLog(@" - Stopping Region Monitoring ");
+}
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
@@ -95,8 +94,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
-    NSLog(@"error");
     NSLog(@"%@",[error localizedDescription]);
+    [self locationUpdated:[error localizedDescription]];
 }
 
 

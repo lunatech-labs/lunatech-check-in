@@ -22,6 +22,8 @@
      self.username = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.text = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
      self.textField.delegate = self;
+     if (self.username)
+         isCheckin = [NSString stringWithFormat:@"Welcome %@",_username];
      if (!isCheckin)
          isCheckin =  @"Welcome! Tap to enter your email.";
      [self updateStatusLabel: isCheckin];
@@ -65,5 +67,9 @@
     [self.view setNeedsDisplay];//edit
 }
 
+- (void)reloadLocationService:(id)sender {
+    [[Geofencer sharedFencer] stopMonitoring];
+    [[Geofencer sharedFencer] startMonitoring];
+}
 
 @end

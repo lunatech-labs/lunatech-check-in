@@ -23,6 +23,7 @@
 +(id) sharedFencer;
 -(void) locationUpdated;
 -(void) startMonitoring;
+-(void) stopMonitoring;
 -(void) enteredRegion;
 -(void) exitedRegion;
 
