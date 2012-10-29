@@ -8,14 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ViewController.h"
 
-@class ViewController;
 
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {
-    ViewController *viewController;
-    
-}
+@interface AppDelegate : UIResponder <UIApplicationDelegate> 
 
 @property (nonatomic, strong) IBOutlet ViewController *viewController;
 

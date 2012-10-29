@@ -7,22 +7,20 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    if (!viewController) {
-        viewController = (ViewController*) self.window.rootViewController;
+    if (!_viewController) {
+        _viewController = (ViewController*) self.window.rootViewController;
     }
     [[Geofencer sharedFencer] startMonitoring];
-    [[Geofencer sharedFencer] setDelegate:viewController];
+    [[Geofencer sharedFencer] setDelegate:_viewController];
     return YES;
 }
 
