@@ -8,7 +8,6 @@
 
 #import "Notifier.h"
 
-#define kNotificationSoundDefault @"sound.caf"
 
 @implementation Notifier
 

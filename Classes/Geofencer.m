@@ -11,7 +11,7 @@
 @implementation Geofencer
 @synthesize delegate;
 
-#define kRegionLunatechOffice [[CLRegion alloc] initCircularRegionWithCenter:CLLocationCoordinate2DMake(51.919606, 4.456255) radius:30.0 identifier:@"Lunatech Labs"]
+
 
 + (id) sharedFencer
 {
@@ -74,7 +74,6 @@
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
     [self exitedRegion];
-    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -109,7 +108,7 @@
     [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is entering the Lunatech Office!", username]];
     
     
-    NSURL *url = [ NSURL URLWithString:[ NSString stringWithFormat: @"http://198.101.196.161/checkin/%@", username ] ];
+    NSURL *url = [ NSURL URLWithString:kNetworkCheckInURL(username)];
     
     NSURLRequest *request = [ NSURLRequest requestWithURL: url ];
     
@@ -135,7 +134,7 @@
     
     [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is out of the Lunatech Office!", username]];
 
-    NSURL *url = [ NSURL URLWithString:[ NSString stringWithFormat: @"http://198.101.196.161/checkout/%@", username ] ];
+    NSURL *url = [ NSURL URLWithString:kNetworkCheckOutURL(username)];
     
     NSURLRequest *request = [ NSURLRequest requestWithURL: url ];
     
