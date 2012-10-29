@@ -70,7 +70,6 @@
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
-    //NSLog(@" - Exited Region %@", viewController.status.text);
     NSLog(@" - Exited Region viewController.status.text");
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
@@ -107,16 +106,7 @@
     
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    if ([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive) {
-        [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is entering the Lunatech Office!", username]];
-        
-    } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Show an alert or otherwise notify the user
-            [[Notifier sharedNotifier] popupMessage:[NSString stringWithFormat:@"%@ is entering the Lunatech Office!", username]];
-            
-        });
-    }
+    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is entering the Lunatech Office!", username]];
     
     
     NSURL *url = [ NSURL URLWithString:[ NSString stringWithFormat: @"http://198.101.196.161/checkin/%@", username ] ];
@@ -135,9 +125,7 @@
         [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
     }
     
-    NSString *greeting = [[NSString alloc] initWithFormat:@"%@ is in the office", username];
-    //[viewController updateStatusLabel:greeting];
-    [self locationUpdated:greeting];
+    [self locationUpdated:[NSString stringWithFormat:@"%@ is in the office", username]];
 }
 
 - (void) exitedRegion
@@ -145,15 +133,8 @@
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
-    if ([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive) {
-        [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is out of the Lunatech Office!", username]];
-    } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Show an alert or otherwise notify the user            
-            [[Notifier sharedNotifier] popupMessage:[NSString stringWithFormat:@"%@ is out of the Lunatech Office!", username]];
-        });
-    }
-    
+    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is out of the Lunatech Office!", username]];
+
     NSURL *url = [ NSURL URLWithString:[ NSString stringWithFormat: @"http://198.101.196.161/checkout/%@", username ] ];
     
     NSURLRequest *request = [ NSURLRequest requestWithURL: url ];
@@ -171,10 +152,7 @@
 
     }
     
-    
-    NSString *greeting = [[NSString alloc] initWithFormat:@"%@ is out of the office", username];
-    //[viewController updateStatusLabel:greeting];
-    [self locationUpdated:greeting];
+    [self locationUpdated:[NSString stringWithFormat:@"%@ is out of the office", username]];
 }
 
 

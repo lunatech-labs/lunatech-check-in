@@ -29,12 +29,6 @@
      [self updateStatusLabel: isCheckin];
 }
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [_textField resignFirstResponder];
     [_textField resignFirstResponder];

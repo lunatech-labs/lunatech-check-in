@@ -14,5 +14,6 @@
 +(id) sharedNotifier;
 -(void) notifyMessage:(NSString*) message;
 -(void) popupMessage:(NSString*) message;
+-(void) scheduledMessage:(NSString*) message;
 
 @end
