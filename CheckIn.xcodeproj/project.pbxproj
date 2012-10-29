@@ -37,6 +37,7 @@
 		C34D4ABB163ADBE800149C84 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D4AB1163ADBE800149C84 /* iTunesArtwork@2x.png */; };
 		C3938606163EE77800D3603E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3938604163EE77800D3603E /* Default.png */; };
 		C3938607163EE77800D3603E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3938605163EE77800D3603E /* Default@2x.png */; };
+		C393860A163EE92B00D3603E /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C3938609163EE92B00D3603E /* Notifier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,8 @@
 		C34D4AB1163ADBE800149C84 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		C3938604163EE77800D3603E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C3938605163EE77800D3603E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C3938608163EE92B00D3603E /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
+		C3938609163EE92B00D3603E /* Notifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				0A29257216318BA500E00CFE /* ViewController.m */,
 				C335B6CE163198D8003F69E9 /* Geofencer.h */,
 				C335B6CF163198D8003F69E9 /* Geofencer.m */,
+				C3938608163EE92B00D3603E /* Notifier.h */,
+				C3938609163EE92B00D3603E /* Notifier.m */,
 				0A29257C16318BD100E00CFE /* Supporting Files */,
 				C335B6CD163196FC003F69E9 /* Resources */,
 			);
@@ -271,6 +276,7 @@
 				0A29257716318BA500E00CFE /* main.m in Sources */,
 				0A29257B16318BA500E00CFE /* ViewController.m in Sources */,
 				C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */,
+				C393860A163EE92B00D3603E /* Notifier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
