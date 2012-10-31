@@ -17,7 +17,8 @@
 
 @interface Geofencer : NSObject <CLLocationManagerDelegate> {
     CLLocationManager *regionManager;
-    id<LocationUpdaterDelegate> delegate;    
+    id<LocationUpdaterDelegate> delegate;
+    BOOL isMonitoring;
 }
 
 +(id) sharedFencer;

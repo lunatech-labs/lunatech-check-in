@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ViewController.h"
+#import "MenuViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> 
 
-@property (nonatomic, strong) IBOutlet ViewController *viewController;
+@property (nonatomic, strong) IBOutlet UITableViewController *viewController;
 
 @end

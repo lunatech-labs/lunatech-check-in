@@ -23,5 +23,5 @@ return _sharedObject; \
     #import <Foundation/Foundation.h>
     #import "Geofencer.h"
     #import "Notifier.h"
-    #import "AppSettings.h"
+    #import "AppConfig.h"
 #endif

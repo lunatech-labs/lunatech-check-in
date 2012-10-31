@@ -29,6 +29,7 @@
         if (!regionManager)
             regionManager = [[CLLocationManager alloc] init];
         regionManager.delegate = self;
+        isMonitoring = false;
     }
     return self;    
 }
@@ -48,16 +49,20 @@
 
 - (void) startMonitoring
 {
-    
-    // Start monitoring for our CLRegion using best accuracy
-    [regionManager startMonitoringForRegion:kRegionLunatechOffice desiredAccuracy:kCLLocationAccuracyBest];
-    NSLog(@" - Starting Region Monitoring ");    
+    if (!isMonitoring) {
+        NSLog(@" - Starting Region Monitoring ");
+        [regionManager startMonitoringForRegion:kRegionLunatechOffice desiredAccuracy:kCLLocationAccuracyBest];
+        isMonitoring = YES;
+    }
 }
 
 - (void) stopMonitoring
 {
-    [regionManager stopMonitoringForRegion:kRegionLunatechOffice];
-    NSLog(@" - Stopping Region Monitoring ");
+    if (isMonitoring) {
+        NSLog(@" - Stopping Region Monitoring ");
+        [regionManager stopMonitoringForRegion:kRegionLunatechOffice];
+        isMonitoring = NO;
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region

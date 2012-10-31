@@ -23,6 +23,8 @@
 		0A523D2F15A98A400061997E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2E15A98A400061997E /* CoreGraphics.framework */; };
 		0A523D7015A9F6CD0061997E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D6F15A9F6CD0061997E /* CoreLocation.framework */; };
 		0A523D8A15AA11090061997E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D8915AA11090061997E /* AVFoundation.framework */; };
+		C309A8F5163FE154008A5CFD /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C309A8F4163FE154008A5CFD /* MenuViewController.m */; };
+		C309A8F916402D40008A5CFD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C309A8F816402D40008A5CFD /* Icon@2x.png */; };
 		C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B6CF163198D8003F69E9 /* Geofencer.m */; };
 		C335B6D61631A6F5003F69E9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C335B6D51631A6F5003F69E9 /* background.png */; };
 		C34D4AB2163ADBE800149C84 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C34D4AA8163ADBE800149C84 /* Icon-72.png */; };
@@ -62,6 +64,10 @@
 		0A523D4815A98A410061997E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0A523D6F15A9F6CD0061997E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0A523D8915AA11090061997E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C309A8F3163FE154008A5CFD /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C309A8F4163FE154008A5CFD /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C309A8F7163FE4C1008A5CFD /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		C309A8F816402D40008A5CFD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
 		C335B6CE163198D8003F69E9 /* Geofencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geofencer.h; sourceTree = "<group>"; };
 		C335B6CF163198D8003F69E9 /* Geofencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geofencer.m; sourceTree = "<group>"; };
 		C335B6D51631A6F5003F69E9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
 				0A29256516318BA500E00CFE /* AppDelegate.h */,
 				0A29256616318BA500E00CFE /* AppDelegate.m */,
+				C309A8F3163FE154008A5CFD /* MenuViewController.h */,
+				C309A8F4163FE154008A5CFD /* MenuViewController.m */,
 				0A29257116318BA500E00CFE /* ViewController.h */,
 				0A29257216318BA500E00CFE /* ViewController.m */,
 				C335B6CE163198D8003F69E9 /* Geofencer.h */,
@@ -111,6 +119,7 @@
 				C3938609163EE92B00D3603E /* Notifier.m */,
 				0A29257C16318BD100E00CFE /* Supporting Files */,
 				C335B6CD163196FC003F69E9 /* Resources */,
+				C309A8F7163FE4C1008A5CFD /* AppConfig.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 		C34D4AA7163ADBE800149C84 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				C309A8F816402D40008A5CFD /* Icon@2x.png */,
 				C34D4AA8163ADBE800149C84 /* Icon-72.png */,
 				C34D4AA9163ADBE800149C84 /* Icon-72@2x.png */,
 				C34D4AAA163ADBE800149C84 /* Icon-Small-50.png */,
@@ -262,6 +272,7 @@
 				C34D4ABB163ADBE800149C84 /* iTunesArtwork@2x.png in Resources */,
 				C3938606163EE77800D3603E /* Default.png in Resources */,
 				C3938607163EE77800D3603E /* Default@2x.png in Resources */,
+				C309A8F916402D40008A5CFD /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +288,7 @@
 				0A29257B16318BA500E00CFE /* ViewController.m in Sources */,
 				C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */,
 				C393860A163EE92B00D3603E /* Notifier.m in Sources */,
+				C309A8F5163FE154008A5CFD /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
