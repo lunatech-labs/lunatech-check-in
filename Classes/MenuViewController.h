@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewHeader.h"
 
 @interface MenuViewController : UITableViewController <UITextFieldDelegate>
 

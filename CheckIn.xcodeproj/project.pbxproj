@@ -42,6 +42,7 @@
 		C393860A163EE92B00D3603E /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C3938609163EE92B00D3603E /* Notifier.m */; };
 		C3FAE3281642D8D4007D176E /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FAE3271642D8D4007D176E /* Location.m */; };
 		C3FAE32D1642D98D007D176E /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FAE32C1642D98D007D176E /* TableViewHeader.m */; };
+		C3FAE3311642E9A1007D176E /* Lunatech Research logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3FAE3301642E9A1007D176E /* Lunatech Research logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		C3FAE3271642D8D4007D176E /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		C3FAE32B1642D98D007D176E /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
 		C3FAE32C1642D98D007D176E /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
+		C3FAE3301642E9A1007D176E /* Lunatech Research logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lunatech Research logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		C335B6CD163196FC003F69E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C3FAE3301642E9A1007D176E /* Lunatech Research logo.png */,
 				C3938604163EE77800D3603E /* Default.png */,
 				C3938605163EE77800D3603E /* Default@2x.png */,
 				C34D4AA7163ADBE800149C84 /* icons */,
@@ -299,6 +302,7 @@
 				C3938606163EE77800D3603E /* Default.png in Resources */,
 				C3938607163EE77800D3603E /* Default@2x.png in Resources */,
 				C309A8F916402D40008A5CFD /* Icon@2x.png in Resources */,
+				C3FAE3311642E9A1007D176E /* Lunatech Research logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

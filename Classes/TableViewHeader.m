@@ -14,7 +14,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Lunatech Research logo.png"]];
+        logo.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height-10);
+        logo.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:logo];
     }
     return self;
 }

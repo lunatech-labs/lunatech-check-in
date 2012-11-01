@@ -13,6 +13,7 @@
 #define kInputStateModeManual 3
 
 @interface MenuViewController ()
+
 @property (nonatomic, strong) UITextField * userInputField;
 @property (nonatomic, strong) NSString * user;
 @property (nonatomic, strong) UITableViewCell * activeCheckInMode;
@@ -41,7 +42,7 @@
         _state = kInputStateMode;
     else
         _state = kInputStateUser;
-    
+    self.tableView.tableHeaderView = [[TableViewHeader alloc] initWithFrame:CGRectMake(0, 10, 320, 100)];
 }
 
 - (void)didReceiveMemoryWarning
