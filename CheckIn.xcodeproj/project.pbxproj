@@ -40,6 +40,8 @@
 		C3938606163EE77800D3603E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3938604163EE77800D3603E /* Default.png */; };
 		C3938607163EE77800D3603E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3938605163EE77800D3603E /* Default@2x.png */; };
 		C393860A163EE92B00D3603E /* Notifier.m in Sources */ = {isa = PBXBuildFile; fileRef = C3938609163EE92B00D3603E /* Notifier.m */; };
+		C3FAE3281642D8D4007D176E /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FAE3271642D8D4007D176E /* Location.m */; };
+		C3FAE32D1642D98D007D176E /* TableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FAE32C1642D98D007D176E /* TableViewHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,10 @@
 		C3938605163EE77800D3603E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C3938608163EE92B00D3603E /* Notifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifier.h; sourceTree = "<group>"; };
 		C3938609163EE92B00D3603E /* Notifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifier.m; sourceTree = "<group>"; };
+		C3FAE3261642D8D4007D176E /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		C3FAE3271642D8D4007D176E /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		C3FAE32B1642D98D007D176E /* TableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeader.h; sourceTree = "<group>"; };
+		C3FAE32C1642D98D007D176E /* TableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,20 +112,17 @@
 		0A29256416318BA500E00CFE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C3FAE32A1642D90F007D176E /* Worker classes */,
+				C3FAE3291642D8FF007D176E /* Model */,
 				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
-				0A29256516318BA500E00CFE /* AppDelegate.h */,
-				0A29256616318BA500E00CFE /* AppDelegate.m */,
 				C309A8F3163FE154008A5CFD /* MenuViewController.h */,
 				C309A8F4163FE154008A5CFD /* MenuViewController.m */,
 				0A29257116318BA500E00CFE /* ViewController.h */,
 				0A29257216318BA500E00CFE /* ViewController.m */,
-				C335B6CE163198D8003F69E9 /* Geofencer.h */,
-				C335B6CF163198D8003F69E9 /* Geofencer.m */,
-				C3938608163EE92B00D3603E /* Notifier.h */,
-				C3938609163EE92B00D3603E /* Notifier.m */,
 				0A29257C16318BD100E00CFE /* Supporting Files */,
 				C335B6CD163196FC003F69E9 /* Resources */,
-				C309A8F7163FE4C1008A5CFD /* AppConfig.h */,
+				C3FAE32B1642D98D007D176E /* TableViewHeader.h */,
+				C3FAE32C1642D98D007D176E /* TableViewHeader.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 		0A29257C16318BD100E00CFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C309A8F7163FE4C1008A5CFD /* AppConfig.h */,
 				0A29256716318BA500E00CFE /* CheckIn-Info.plist */,
 				0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */,
 				0A29256916318BA500E00CFE /* InfoPlist.strings */,
@@ -199,6 +203,28 @@
 			name = icons;
 			path = Resources/icons;
 			sourceTree = SOURCE_ROOT;
+		};
+		C3FAE3291642D8FF007D176E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3FAE3261642D8D4007D176E /* Location.h */,
+				C3FAE3271642D8D4007D176E /* Location.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C3FAE32A1642D90F007D176E /* Worker classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A29256516318BA500E00CFE /* AppDelegate.h */,
+				0A29256616318BA500E00CFE /* AppDelegate.m */,
+				C335B6CE163198D8003F69E9 /* Geofencer.h */,
+				C335B6CF163198D8003F69E9 /* Geofencer.m */,
+				C3938608163EE92B00D3603E /* Notifier.h */,
+				C3938609163EE92B00D3603E /* Notifier.m */,
+			);
+			name = "Worker classes";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -289,6 +315,8 @@
 				C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */,
 				C393860A163EE92B00D3603E /* Notifier.m in Sources */,
 				C309A8F5163FE154008A5CFD /* MenuViewController.m in Sources */,
+				C3FAE3281642D8D4007D176E /* Location.m in Sources */,
+				C3FAE32D1642D98D007D176E /* TableViewHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

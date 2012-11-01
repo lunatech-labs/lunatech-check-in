@@ -25,9 +25,10 @@
 -(void) locationUpdated;
 -(void) startMonitoring;
 -(void) stopMonitoring;
--(void) enteredRegion;
--(void) exitedRegion;
+-(void) enteredRegion:(int) regionIndex;
+-(void) exitedRegion:(int) regionIndex;
 
-@property(nonatomic, strong)id delegate;
+@property(nonatomic, strong) id delegate;
+@property(nonatomic, strong) NSMutableArray * locations;
 
 @end

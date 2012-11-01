@@ -10,7 +10,7 @@
 
 #define kRegionLunatechOffice [[CLRegion alloc] initCircularRegionWithCenter:CLLocationCoordinate2DMake(51.919606, 4.456255) radius:30.0 identifier:@"Lunatech Labs"]
 
-#define kNetworkCheckInURL(username) [NSString stringWithFormat: @"http://198.101.196.161/checkout/%@", username]
+#define kNetworkCheckInURL(username) [NSString stringWithFormat: @"http://198.101.196.161/checkin/%@", username]
 #define kNetworkCheckOutURL(username) [NSString stringWithFormat: @"http://198.101.196.161/checkout/%@", username]
 
 #define kTableViewCellFont [UIFont fontWithName:@"Courier" size:18.0]

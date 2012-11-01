@@ -34,6 +34,14 @@
     return self;    
 }
 
+- (NSMutableArray*) locations
+{
+    if (!_locations)
+        _locations = [[NSMutableArray alloc] initWithObjects:
+                      [[Location alloc] initWithIdentifier:@"Lunatech Office" longitude:51.919606 latitude:4.456255 andRadius:30.0], nil];
+    return _locations;
+}
+
 #pragma mark -
 #pragma mark protocol methods
 
@@ -51,7 +59,9 @@
 {
     if (!isMonitoring) {
         NSLog(@" - Starting Region Monitoring ");
-        [regionManager startMonitoringForRegion:kRegionLunatechOffice desiredAccuracy:kCLLocationAccuracyBest];
+        for (int i = 0; i < [self.locations count]; i++) {
+            [regionManager startMonitoringForRegion:[[self.locations objectAtIndex:i] region] desiredAccuracy:kCLLocationAccuracyBest];
+        }
         isMonitoring = YES;
     }
 }
@@ -60,7 +70,9 @@
 {
     if (isMonitoring) {
         NSLog(@" - Stopping Region Monitoring ");
-        [regionManager stopMonitoringForRegion:kRegionLunatechOffice];
+        for (int i = 0; i < [_locations count]; i++) {
+            [regionManager stopMonitoringForRegion:[[self.locations objectAtIndex:i] region]];
+        }
         isMonitoring = NO;
     }
 }
@@ -70,7 +82,7 @@
     NSLog(@" - Entered Region");
     NSLog(@" - Entered Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    [self enteredRegion];
+    [self enteredRegion:1];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
@@ -78,7 +90,7 @@
     NSLog(@" - Exited Region viewController.status.text");
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    [self exitedRegion];
+    [self exitedRegion:1];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -87,10 +99,10 @@
     
     if ([region containsCoordinate:regionManager.location.coordinate]) {
         NSLog(@" - Region Monitored Entered Region");
-        [self enteredRegion];
+        [self enteredRegion:1];
     } else {
         NSLog(@" - Region Monitored Exited Region");
-        [self exitedRegion];
+        [self exitedRegion:1];
     }
 }
 
@@ -105,12 +117,12 @@
 #pragma mark -
 #pragma mark Region code
 
-- (void) enteredRegion
+- (void) enteredRegion:(int)regionIndex
 {
     
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is entering the Lunatech Office!", username]];
+    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"You just entered %@", [[self.locations objectAtIndex:regionIndex] identifier]]];
     
     
     NSURL *url = [ NSURL URLWithString:kNetworkCheckInURL(username)];
@@ -123,7 +135,7 @@
     if (theConnection) {
         // Create the NSMutableData to hold the received data.
         // receivedData is an instance variable declared elsewhere.
-        [theConnection start];
+        [theConnection start];	
     } else {
         // Inform the user that the connection failed.
         [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
@@ -132,12 +144,12 @@
     [self locationUpdated:[NSString stringWithFormat:@"%@ is in the office", username]];
 }
 
-- (void) exitedRegion
+- (void) exitedRegion:(int)regionIndex
 {
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
-    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"%@ is out of the Lunatech Office!", username]];
+    [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"You just left %@", [[self.locations objectAtIndex:regionIndex] identifier]]];
 
     NSURL *url = [ NSURL URLWithString:kNetworkCheckOutURL(username)];
     

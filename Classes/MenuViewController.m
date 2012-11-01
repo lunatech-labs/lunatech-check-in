@@ -13,14 +13,12 @@
 #define kInputStateModeManual 3
 
 @interface MenuViewController ()
-@property (nonatomic, strong) NSMutableArray * locations;
 @property (nonatomic, strong) UITextField * userInputField;
 @property (nonatomic, strong) NSString * user;
 @property (nonatomic, strong) UITableViewCell * activeCheckInMode;
 @property (nonatomic) int state;
 
 - (IBAction) toggleMode: (id) sender;
-- (void) loadLocationArray;
 
 @end
 
@@ -62,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)  return 1;
-    return section == 1 ? 2 : [_locations count];
+    return section == 1 ? 2 : [[[Geofencer sharedFencer] locations] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,7 +93,7 @@
         cell.tag = indexPath.row;
     } else {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"locationCell"];
-        cell.textLabel.text = [_locations objectAtIndex:indexPath.row];
+        cell.textLabel.text = [[[[Geofencer sharedFencer] locations] objectAtIndex:indexPath.row] identifier];
     }
     cell.textLabel.textColor = kTableViewCellTextColor;
     cell.textLabel.font = kTableViewCellFont;
@@ -171,7 +169,17 @@
 {
     if (indexPath.section == 1) {
         self.activeCheckInMode = [tableView cellForRowAtIndexPath:indexPath];
+    } else if (indexPath.section == 2) {
+        UITableViewCell * selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+        if (selectedCell.accessoryType == UITableViewCellAccessoryNone) {
+            [[Geofencer sharedFencer] enteredRegion:indexPath.row];
+            selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else {
+            [[Geofencer sharedFencer] exitedRegion:indexPath.row];
+            selectedCell.accessoryType = UITableViewCellAccessoryNone;
+        }
     }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -185,7 +193,6 @@
 
     if (activeCheckInMode.tag == 0 && _state == kInputStateModeManual) {
         // automatic
-        _locations = nil;
         [[Geofencer sharedFencer] startMonitoring];
         _state = kInputStateMode;
         [self.tableView beginUpdates];
@@ -196,10 +203,9 @@
         // manual
         [[Geofencer sharedFencer] stopMonitoring];
         _state = kInputStateModeManual;
-        [self loadLocationArray];
         [self.tableView beginUpdates];
         [self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-        for (int i = 0; i < [_locations count]; i++) {
+        for (int i = 0; i < [[[Geofencer sharedFencer] locations] count]; i++) {
             NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:i inSection:2];
             [self.tableView  insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
@@ -210,10 +216,6 @@
     _activeCheckInMode.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
-- (void) loadLocationArray
-{
-    _locations = [NSMutableArray arrayWithObjects:@"Lunatech office", @"Sdu Center Court", nil];
-}
 
 #pragma mark - Keyboard delegat
 
