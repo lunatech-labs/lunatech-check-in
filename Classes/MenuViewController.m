@@ -42,7 +42,7 @@
         _state = kInputStateMode;
     else
         _state = kInputStateUser;
-    self.tableView.tableHeaderView = [[TableViewHeader alloc] initWithFrame:CGRectMake(0, 10, 320, 100)];
+    self.tableView.tableHeaderView = [[TableViewHeader alloc] initWithFrame:CGRectMake(0, 30, 320, 130)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -235,7 +235,7 @@
         [self.tableView beginUpdates];
         [self.tableView insertSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
         
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < [[[Geofencer sharedFencer] locations] count]; i++) {
             NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:i inSection:1];
             [self.tableView  insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
         }

@@ -82,7 +82,7 @@
     NSLog(@" - Entered Region");
     NSLog(@" - Entered Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    [self enteredRegion:1];
+    [self enteredRegion:0];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
@@ -90,7 +90,7 @@
     NSLog(@" - Exited Region viewController.status.text");
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    [self exitedRegion:1];
+    [self exitedRegion:0];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -99,10 +99,10 @@
     
     if ([region containsCoordinate:regionManager.location.coordinate]) {
         NSLog(@" - Region Monitored Entered Region");
-        [self enteredRegion:1];
+        [self enteredRegion:0];
     } else {
         NSLog(@" - Region Monitored Exited Region");
-        [self exitedRegion:1];
+        [self exitedRegion:0];
     }
 }
 
