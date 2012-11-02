@@ -192,13 +192,15 @@
 
     NSIndexSet * indexSet = [[NSIndexSet alloc] initWithIndex:2];
 
-    if (activeCheckInMode.tag == 0 && _state == kInputStateModeManual) {
+    if (activeCheckInMode.tag == 0) {
         // automatic
         [[Geofencer sharedFencer] startMonitoring];
-        _state = kInputStateMode;
-        [self.tableView beginUpdates];
-        [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView endUpdates];
+        if (_state == kInputStateModeManual) {
+            _state = kInputStateMode;
+            [self.tableView beginUpdates];
+            [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView endUpdates];
+        }
         
     } else if (activeCheckInMode.tag == 1 && _state != kInputStateModeManual)  {
         // manual
