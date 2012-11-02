@@ -25,8 +25,8 @@
     if (self) {
         // Override point for customization after application launch.
         // Create location manager
-        if (!regionManager)
-            regionManager = [[CLLocationManager alloc] init];
+        regionManager = [[CLLocationManager alloc] init];
+
         regionManager.delegate = self;
         isMonitoring = false;
     }
@@ -42,16 +42,6 @@
 }
 
 #pragma mark -
-#pragma mark protocol methods
-
--(void)locationUpdated:(NSString*) newLocation {
-
-    //check foor delegate using instances
-    if([_delegate respondsToSelector:@selector(locationUpdated:)])
-        [_delegate locationUpdated:newLocation];
-}
-
-#pragma mark -
 #pragma mark locationManager delegation
 
 - (void) startMonitoring
@@ -62,6 +52,7 @@
             [regionManager startMonitoringForRegion:[[self.locations objectAtIndex:i] region]];
             [regionManager setDesiredAccuracy:kCLLocationAccuracyBest];
         }
+        [regionManager setDesiredAccuracy:kCLLocationAccuracyBest];
         isMonitoring = YES;
     }
 }
@@ -110,9 +101,27 @@
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
     NSLog(@"%@",[error localizedDescription]);
-    [self locationUpdated:[error localizedDescription]];
+//    [self locationUpdated:[error localizedDescription]];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    [[Notifier sharedNotifier] notifyMessage: [NSString stringWithFormat:@" - LocationManager didFailWithError: %@", [error localizedDescription]]];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusDenied) {
+        [self stopMonitoring];
+        [[Notifier sharedNotifier] notifyMessage: @"kCLAuthorizationStatus"];
+    } else if (status == kCLAuthorizationStatusAuthorized) {
+        [self startMonitoring];
+        [[Notifier sharedNotifier] notifyMessage: @"kCLAuthorizationStatusAuthorized"];
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        [[Notifier sharedNotifier] notifyMessage: @"kCLAuthorizationStatusNotDetermined, try again!"];
+        
+    }
+}
 
 #pragma mark -
 #pragma mark Region code
@@ -141,7 +150,7 @@
         [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
     }
     
-    [self locationUpdated:[NSString stringWithFormat:@"%@ is in the office", username]];
+//    [self locationUpdated:[NSString stringWithFormat:@"%@ is in the office", username]];
 }
 
 - (void) exitedRegion:(int)regionIndex
@@ -168,7 +177,7 @@
 
     }
     
-    [self locationUpdated:[NSString stringWithFormat:@"%@ is out of the office", username]];
+//    [self locationUpdated:[NSString stringWithFormat:@"%@ is out of the office", username]];
 }
 
 

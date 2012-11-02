@@ -9,12 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol LocationUpdaterDelegate <NSObject>
-@optional
--(void)locationUpdated:(NSString*) newLocation;
-
-@end
-
 @interface Geofencer : NSObject <CLLocationManagerDelegate> {
     CLLocationManager *regionManager;
     BOOL isMonitoring;
@@ -27,7 +21,6 @@
 -(void) enteredRegion:(int) regionIndex;
 -(void) exitedRegion:(int) regionIndex;
 
-@property(nonatomic, strong) id<LocationUpdaterDelegate>  delegate;
 @property(nonatomic, strong) NSMutableArray * locations;
 
 @end

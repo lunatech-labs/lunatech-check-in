@@ -15,12 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//
-//    if (!_viewController) {
-//        _viewController = (uitablev*) self.window.rootViewController;
-//    }
-//    [[Geofencer sharedFencer] startMonitoring];
-    [[Geofencer sharedFencer] setDelegate:_viewController];
     return YES;
 }
 
