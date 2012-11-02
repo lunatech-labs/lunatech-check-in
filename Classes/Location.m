@@ -24,7 +24,7 @@
 - (CLRegion*) region
 {
     if (!_region)
-        _region = [[CLRegion alloc] initCircularRegionWithCenter:CLLocationCoordinate2DMake(_longitude, _latitude) radius:_radius identifier:_identifier];
+        _region = [[CLRegion alloc] initCircularRegionWithCenter:CLLocationCoordinate2DMake(_latitude, _longitude) radius:_radius identifier:_identifier];
     return _region;
 }
 

@@ -38,7 +38,7 @@
 {
     if (!_locations)
         _locations = [[NSMutableArray alloc] initWithObjects:
-                      [[Location alloc] initWithIdentifier:@"Lunatech Office" longitude:51.919606 latitude:4.456255 andRadius:30.0], nil];
+                      [[Location alloc] initWithIdentifier:@"Lunatech Office" longitude:4.456255 latitude:51.919606 andRadius:30.0], nil];
     return _locations;
 }
 
