@@ -59,7 +59,8 @@
     if (!isMonitoring) {
         NSLog(@" - Starting Region Monitoring ");
         for (int i = 0; i < [self.locations count]; i++) {
-            [regionManager startMonitoringForRegion:[[self.locations objectAtIndex:i] region] desiredAccuracy:kCLLocationAccuracyBest];
+            [regionManager startMonitoringForRegion:[[self.locations objectAtIndex:i] region]];
+            [regionManager setDesiredAccuracy:kCLLocationAccuracyBest];
         }
         isMonitoring = YES;
     }
