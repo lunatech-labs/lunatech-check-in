@@ -12,13 +12,14 @@
 #define kInputStateMode 2
 #define kInputStateModeManual 3
 
-@interface MenuViewController ()
+@interface MenuViewController () {
+}
 
 @property (nonatomic, strong) UITextField * userInputField;
 @property (nonatomic, strong) NSString * user;
 @property (nonatomic, strong) UITableViewCell * activeCheckInMode;
 @property (nonatomic) int state;
-
+@property (nonatomic) BOOL automatic_checkin;
 - (IBAction) toggleMode: (id) sender;
 
 @end
@@ -38,6 +39,8 @@
 {
     [super viewDidLoad];
     _user = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+    _automatic_checkin =  [[NSUserDefaults standardUserDefaults] boolForKey:@"automatic_checkin"];
+    
     if (_user && ![_user isEqualToString:@""])
         _state = kInputStateMode;
     else
@@ -71,7 +74,7 @@
     
     if (indexPath.section == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCell"];
-        _userInputField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 280, 44)];
+        _userInputField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 280, 24)];
         _userInputField.placeholder = @"your email";
         _userInputField.delegate = self;
         _userInputField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -86,11 +89,20 @@
 
     } else if (indexPath.section == 1) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"checkMarkCell"];
-        if (indexPath.row == 0)
+        if (indexPath.row == 0) {
             cell.textLabel.text = @"Automatic";
-        else
+            if (_automatic_checkin) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                _activeCheckInMode = cell;
+            }
+        } else {
             cell.textLabel.text = @"Manual";
-
+            if (!_automatic_checkin) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                _activeCheckInMode = cell;
+            }
+        }
+        
         cell.tag = indexPath.row;
     } else {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"locationCell"];
@@ -226,13 +238,12 @@
     [_userInputField resignFirstResponder];
     [_userInputField resignFirstResponder];
     
-#warning email adres needs to be valided!
-    [self saveUser:_user];
+    _user = _userInputField.text;
+    if (![self saveUser:_user] || _state != kInputStateUser)
+        return false;
 
     if (_state == kInputStateUser) {
-        _user = _userInputField.text;
         _state = kInputStateMode;
-        
         
         [self.tableView beginUpdates];
         [self.tableView insertSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
@@ -242,22 +253,38 @@
             [self.tableView  insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
         [self.tableView endUpdates];
+   
+        _automatic_checkin = YES;
     } else {
         _state = kInputStateUser;
         [self.tableView beginUpdates];
         [self.tableView deleteSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
         [self.tableView endUpdates];
+        _automatic_checkin = NO;
+        
     }
+    
+    [[NSUserDefaults standardUserDefaults] setBool:_automatic_checkin forKey:@"automatic_checkin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     return YES;
 }
 
-- (void) saveUser:(NSString*)user
+- (BOOL) saveUser:(NSString*)user
 {
-    if (!user || [user isEqualToString:@""])
+
+    #warning email adres needs to be valided!
+    if (!user || [user isEqualToString:@""]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"email_preferences"]) {
+            _userInputField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"email_preferences"];
+            return YES;
+        }
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"email_preferences"];
-    else
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return NO;
+    } else {
         [[NSUserDefaults standardUserDefaults] setObject:user forKey:@"email_preferences"];
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        return YES;
+    }
 }
 @end
