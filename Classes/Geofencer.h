@@ -17,7 +17,6 @@
 
 @interface Geofencer : NSObject <CLLocationManagerDelegate> {
     CLLocationManager *regionManager;
-    id<LocationUpdaterDelegate> delegate;
     BOOL isMonitoring;
 }
 
@@ -28,7 +27,7 @@
 -(void) enteredRegion:(int) regionIndex;
 -(void) exitedRegion:(int) regionIndex;
 
-@property(nonatomic, strong) id delegate;
+@property(nonatomic, strong) id<LocationUpdaterDelegate>  delegate;
 @property(nonatomic, strong) NSMutableArray * locations;
 
 @end

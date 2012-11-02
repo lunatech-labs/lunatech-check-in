@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		0A0F343C1631D6FB0036C681 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A0F343B1631D6FB0036C681 /* logo.png */; };
 		0A29257316318BA500E00CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29256616318BA500E00CFE /* AppDelegate.m */; };
-		0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256716318BA500E00CFE /* CheckIn-Info.plist */; };
 		0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256916318BA500E00CFE /* InfoPlist.strings */; };
 		0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */; };
 		0A29257716318BA500E00CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29256D16318BA500E00CFE /* main.m */; };
 		0A29257816318BA500E00CFE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256E16318BA500E00CFE /* Settings.bundle */; };
 		0A29257916318BA500E00CFE /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0A29256F16318BA500E00CFE /* sound.caf */; };
 		0A29257A16318BA500E00CFE /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0A29257016318BA500E00CFE /* sound.wav */; };
-		0A29257B16318BA500E00CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A29257216318BA500E00CFE /* ViewController.m */; };
 		0A29257E16318FA000E00CFE /* logo-lunatech.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29257D16318FA000E00CFE /* logo-lunatech.png */; };
 		0A523D2B15A98A400061997E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2A15A98A400061997E /* UIKit.framework */; };
 		0A523D2D15A98A400061997E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A523D2C15A98A400061997E /* Foundation.framework */; };
@@ -57,8 +55,6 @@
 		0A29256E16318BA500E00CFE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		0A29256F16318BA500E00CFE /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		0A29257016318BA500E00CFE /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
-		0A29257116318BA500E00CFE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A29257216318BA500E00CFE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0A29257D16318FA000E00CFE /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lunatech.png"; path = "../logo-lunatech.png"; sourceTree = "<group>"; };
 		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -119,8 +115,6 @@
 				0A29256B16318BA500E00CFE /* MainStoryboard.storyboard */,
 				C309A8F3163FE154008A5CFD /* MenuViewController.h */,
 				C309A8F4163FE154008A5CFD /* MenuViewController.m */,
-				0A29257116318BA500E00CFE /* ViewController.h */,
-				0A29257216318BA500E00CFE /* ViewController.m */,
 				0A29257C16318BD100E00CFE /* Supporting Files */,
 				C335B6CD163196FC003F69E9 /* Resources */,
 				C3FAE32B1642D98D007D176E /* TableViewHeader.h */,
@@ -256,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = com.lunatech;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = 0A523D2015A98A400061997E /* Build configuration list for PBXProject "CheckIn" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -280,7 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A29257416318BA500E00CFE /* CheckIn-Info.plist in Resources */,
 				0A29257516318BA500E00CFE /* InfoPlist.strings in Resources */,
 				0A29257616318BA500E00CFE /* MainStoryboard.storyboard in Resources */,
 				0A29257816318BA500E00CFE /* Settings.bundle in Resources */,
@@ -315,7 +308,6 @@
 			files = (
 				0A29257316318BA500E00CFE /* AppDelegate.m in Sources */,
 				0A29257716318BA500E00CFE /* main.m in Sources */,
-				0A29257B16318BA500E00CFE /* ViewController.m in Sources */,
 				C335B6D0163198D8003F69E9 /* Geofencer.m in Sources */,
 				C393860A163EE92B00D3603E /* Notifier.m in Sources */,
 				C309A8F5163FE154008A5CFD /* MenuViewController.m in Sources */,

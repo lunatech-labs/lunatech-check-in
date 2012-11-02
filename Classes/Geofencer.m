@@ -9,7 +9,6 @@
 #import "Geofencer.h"
 
 @implementation Geofencer
-@synthesize delegate;
 
 
 
@@ -48,8 +47,8 @@
 -(void)locationUpdated:(NSString*) newLocation {
 
     //check foor delegate using instances
-    if([delegate respondsToSelector:@selector(locationUpdated:)])
-        [delegate locationUpdated:newLocation];
+    if([_delegate respondsToSelector:@selector(locationUpdated:)])
+        [_delegate locationUpdated:newLocation];
 }
 
 #pragma mark -
