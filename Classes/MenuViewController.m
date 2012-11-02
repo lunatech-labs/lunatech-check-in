@@ -20,9 +20,11 @@
 @property (nonatomic, strong) UITableViewCell * activeCheckInMode;
 @property (nonatomic) int state;
 @property (nonatomic) BOOL automatic_checkin;
-- (IBAction) toggleMode: (id) sender;
 
+- (BOOL) saveUser:(NSString*)user;
+- (BOOL) isValidEmail: (NSString*) email;
 @end
+
 
 @implementation MenuViewController
 
@@ -69,9 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
-    NSLog(@"index row: %d", indexPath.row);
-    
+    UITableViewCell *cell;    
     if (indexPath.section == 0) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCell"];
         _userInputField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 280, 24)];
@@ -271,9 +271,7 @@
 
 - (BOOL) saveUser:(NSString*)user
 {
-
-    #warning email adres needs to be valided!
-    if (!user || [user isEqualToString:@""]) {
+    if (!user || [user isEqualToString:@""] || ![self isValidEmail:user]) {
         if ([[NSUserDefaults standardUserDefaults] objectForKey:@"email_preferences"]) {
             _userInputField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"email_preferences"];
             return YES;
@@ -287,4 +285,11 @@
         return YES;
     }
 }
+
+- (BOOL) isValidEmail: (NSString*) email
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"];
+    return [predicate evaluateWithObject: email];
+}
+
 @end
