@@ -46,6 +46,9 @@
 
 - (void) startMonitoring
 {
+    [regionManager startUpdatingLocation];
+    [regionManager startMonitoringSignificantLocationChanges];
+
     if (!isMonitoring) {
         NSLog(@" - Starting Region Monitoring ");
         for (int i = 0; i < [self.locations count]; i++) {
@@ -66,6 +69,8 @@
         }
         isMonitoring = NO;
     }
+    [regionManager stopUpdatingLocation];
+    [regionManager stopMonitoringSignificantLocationChanges];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region

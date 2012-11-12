@@ -41,6 +41,8 @@
 	<true/>
 	<key>NSHumanReadableCopyright</key>
 	<string></string>
+	<key>NSLocationUsageDescription</key>
+	<string>Uses location for Geofencing Lunatech Locations</string>
 	<key>UIApplicationExitsOnSuspend</key>
 	<false/>
 	<key>UIBackgroundModes</key>
