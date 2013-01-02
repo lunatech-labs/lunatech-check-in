@@ -15,6 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // automatic
+    NSLog(@"starting monitoring");
+    [[Geofencer sharedFencer] startMonitoring];
     return YES;
 }
 

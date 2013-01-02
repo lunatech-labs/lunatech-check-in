@@ -19,7 +19,6 @@
 @property (nonatomic, strong) NSString * user;
 @property (nonatomic, strong) UITableViewCell * activeCheckInMode;
 @property (nonatomic) int state;
-@property (nonatomic) BOOL automatic_checkin;
 
 - (BOOL) saveUser:(NSString*)user;
 - (BOOL) isValidEmail: (NSString*) email;
@@ -41,12 +40,8 @@
 {
     [super viewDidLoad];
     _user = [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
-    _automatic_checkin =  [[NSUserDefaults standardUserDefaults] boolForKey:@"automatic_checkin"];
     
-    if (_user && ![_user isEqualToString:@""])
-        _state = kInputStateMode;
-    else
-        _state = kInputStateUser;
+   
     self.tableView.tableHeaderView = [[TableViewHeader alloc] initWithFrame:CGRectMake(0, 30, 320, 130)];
 }
 
@@ -57,11 +52,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    if (_state == kInputStateUser) return 1;
-    return _state == kInputStateMode ? 2 : 3;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -72,42 +62,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;    
-    if (indexPath.section == 0) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCell"];
-        _userInputField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 280, 24)];
-        _userInputField.placeholder = @"your email";
-        _userInputField.delegate = self;
-        _userInputField.autocorrectionType = UITextAutocorrectionTypeNo;
-        _userInputField.autocapitalizationType = UITextAutocapitalizationTypeNone;
-        _userInputField.clearButtonMode = UITextFieldViewModeWhileEditing;
-        _userInputField.returnKeyType = UIReturnKeyDone;
-        _userInputField.text = _user;
-        _userInputField.textColor = kTableViewCellTextColor;
-        _userInputField.font = kTableViewCellFont;
-        _userInputField.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
-        [cell.contentView addSubview:_userInputField];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"inputCell"];
+    _userInputField = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 280, 24)];
+    _userInputField.placeholder = @"your email";
+    _userInputField.delegate = self;
+    _userInputField.autocorrectionType = UITextAutocorrectionTypeNo;
+    _userInputField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    _userInputField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _userInputField.returnKeyType = UIReturnKeyDone;
+    _userInputField.text = _user;
+    _userInputField.textColor = kTableViewCellTextColor;
+    _userInputField.font = kTableViewCellFont;
+    _userInputField.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
+    [cell.contentView addSubview:_userInputField];
 
-    } else if (indexPath.section == 1) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"checkMarkCell"];
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"Automatic";
-            if (_automatic_checkin) {
-                cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                _activeCheckInMode = cell;
-            }
-        } else {
-            cell.textLabel.text = @"Manual";
-            if (!_automatic_checkin) {
-                cell.accessoryType = UITableViewCellAccessoryCheckmark;
-                _activeCheckInMode = cell;
-            }
-        }
-        
-        cell.tag = indexPath.row;
-    } else {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"locationCell"];
-        cell.textLabel.text = [[[[Geofencer sharedFencer] locations] objectAtIndex:indexPath.row] identifier];
-    }
     cell.textLabel.textColor = kTableViewCellTextColor;
     cell.textLabel.font = kTableViewCellFont;
     cell.selectionStyle = kTableViewCellSelectionStyle;
@@ -117,8 +85,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) return @"You";
-    return section == 1 ? @"Check in mode" : @"Locations";
+    return @"You";
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -136,44 +103,7 @@
     return headerView;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Table view delegate
@@ -197,75 +127,15 @@
 }
 
 
-#pragma mark - Set override
-- (void) setActiveCheckInMode:(UITableViewCell *)activeCheckInMode {
-    if (_activeCheckInMode)
-        _activeCheckInMode.accessoryType = UITableViewCellAccessoryNone;
-
-    NSIndexSet * indexSet = [[NSIndexSet alloc] initWithIndex:2];
-
-    if (activeCheckInMode.tag == 0) {
-        // automatic
-        [[Geofencer sharedFencer] startMonitoring];
-        if (_state == kInputStateModeManual) {
-            _state = kInputStateMode;
-            [self.tableView beginUpdates];
-            [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-            [self.tableView endUpdates];
-        }
-        
-    } else if (activeCheckInMode.tag == 1 && _state != kInputStateModeManual)  {
-        // manual
-        [[Geofencer sharedFencer] stopMonitoring];
-        _state = kInputStateModeManual;
-        [self.tableView beginUpdates];
-        [self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-        for (int i = 0; i < [[[Geofencer sharedFencer] locations] count]; i++) {
-            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:i inSection:2];
-            [self.tableView  insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-        }
-        [self.tableView endUpdates];
-    }
-    
-    _activeCheckInMode = activeCheckInMode;
-    _activeCheckInMode.accessoryType = UITableViewCellAccessoryCheckmark;
-}
-
-
 #pragma mark - Keyboard delegat
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [_userInputField resignFirstResponder];
-    [_userInputField resignFirstResponder];
     
     _user = _userInputField.text;
-    if (![self saveUser:_user] || _state != kInputStateUser)
+    if (![self saveUser:_user])
         return false;
 
-    if (_state == kInputStateUser) {
-        _state = kInputStateMode;
-        
-        [self.tableView beginUpdates];
-        [self.tableView insertSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
-        
-        for (int i = 0; i < [[[Geofencer sharedFencer] locations] count]; i++) {
-            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:i inSection:1];
-            [self.tableView  insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-        }
-        [self.tableView endUpdates];
-   
-        _automatic_checkin = YES;
-    } else {
-        _state = kInputStateUser;
-        [self.tableView beginUpdates];
-        [self.tableView deleteSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView endUpdates];
-        _automatic_checkin = NO;
-        
-    }
-    
-    [[NSUserDefaults standardUserDefaults] setBool:_automatic_checkin forKey:@"automatic_checkin"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     return YES;
 }
 
