@@ -12,6 +12,7 @@
 @interface Geofencer : NSObject <CLLocationManagerDelegate> {
     CLLocationManager *regionManager;
     BOOL isMonitoring;
+    int isCheckIn;
 }
 
 +(id) sharedFencer;

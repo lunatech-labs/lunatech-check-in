@@ -29,6 +29,7 @@
 
         regionManager.delegate = self;
         isMonitoring = false;
+        isCheckIn = -1;
     }
     return self;    
 }
@@ -77,8 +78,10 @@
 {
     NSLog(@" - Entered Region");
     NSLog(@" - Entered Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
-    
-    [self enteredRegion:0];
+    if (isCheckIn != 1) {
+        
+        [self enteredRegion:0];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
@@ -86,7 +89,10 @@
     NSLog(@" - Exited Region viewController.status.text");
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    [self exitedRegion:0];
+    if (isCheckIn != 0) {
+        
+        [self exitedRegion:0];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -98,7 +104,7 @@
         [self enteredRegion:0];
     } else {
         NSLog(@" - Region Monitored Exited Region");
-        [self exitedRegion:0];
+        [self exitedRegion:0];  
     }
 }
 
@@ -140,7 +146,7 @@
         // Inform the user that the connection failed.
         [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
     }
-    
+    isCheckIn = 1;
 }
 
 - (void) exitedRegion:(int)regionIndex
@@ -166,7 +172,7 @@
         [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
 
     }
-    
+    isCheckIn = 0;
 }
 
 
