@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A523D2515A98A400061997E"
-               BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+               BuildableName = "checkin.app"
                BlueprintName = "checkin"
                ReferencedContainer = "container:CheckIn.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "checkin.app"
             BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "checkin.app"
             BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BuildableName = "checkin.app"
             BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>

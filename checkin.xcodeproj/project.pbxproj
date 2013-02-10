@@ -402,10 +402,10 @@
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename-Prefix.pch";
+				GCC_PREFIX_HEADER = "Classes/checkin-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/checkin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = checkin;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,10 +415,10 @@
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename-Prefix.pch";
+				GCC_PREFIX_HEADER = "Classes/checkin-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Classes/checkin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = checkin;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
