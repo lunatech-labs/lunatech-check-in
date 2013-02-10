@@ -121,6 +121,9 @@
 {
     
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+    if (!username || [username isEqualToString:@""])
+        return;
+    
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"You just entered %@", [[self.locations objectAtIndex:regionIndex] identifier]]];
     
@@ -148,6 +151,9 @@
 - (void) exitedRegion:(int)regionIndex
 {
     NSString *username =  [[NSUserDefaults standardUserDefaults] stringForKey: @"email_preferences"];
+    if (!username || [username isEqualToString:@""])
+         return;
+    
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
     [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"You just left %@", [[self.locations objectAtIndex:regionIndex] identifier]]];

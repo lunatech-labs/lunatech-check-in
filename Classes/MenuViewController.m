@@ -152,8 +152,13 @@
     } else {
         [[NSUserDefaults standardUserDefaults] setObject:user forKey:@"email_preferences"];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        // Restart because we want to checkin or checkout the new user
+        [[Geofencer sharedFencer] stopMonitoring];
+        [[Geofencer sharedFencer] startMonitoring];
+        
         return YES;
     }
+    
 }
 
 - (BOOL) isValidEmail: (NSString*) email
