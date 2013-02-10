@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "0460"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A523D2515A98A400061997E"
-               BuildableName = "CheckIn.app"
-               BlueprintName = "CheckIn"
+               BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+               BlueprintName = "checkin"
                ReferencedContainer = "container:CheckIn.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "CheckIn.app"
-            BlueprintName = "CheckIn"
+            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "CheckIn.app"
-            BlueprintName = "CheckIn"
+            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0A523D2515A98A400061997E"
-            BuildableName = "CheckIn.app"
-            BlueprintName = "CheckIn"
+            BuildableName = "checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app"
+            BlueprintName = "checkin"
             ReferencedContainer = "container:CheckIn.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

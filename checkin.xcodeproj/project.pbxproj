@@ -47,8 +47,8 @@
 		0A0F343B1631D6FB0036C681 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0A29256516318BA500E00CFE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A29256616318BA500E00CFE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A29256716318BA500E00CFE /* CheckIn-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CheckIn-Info.plist"; sourceTree = "<group>"; };
-		0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CheckIn-Prefix.pch"; sourceTree = "<group>"; };
+		0A29256716318BA500E00CFE /* checkin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "checkin-Info.plist"; sourceTree = "<group>"; };
+		0A29256816318BA500E00CFE /* checkin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "checkin-Prefix.pch"; sourceTree = "<group>"; };
 		0A29256A16318BA500E00CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A29256C16318BA500E00CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0A29256D16318BA500E00CFE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		0A29256F16318BA500E00CFE /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		0A29257016318BA500E00CFE /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 		0A29257D16318FA000E00CFE /* logo-lunatech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-lunatech.png"; path = "../logo-lunatech.png"; sourceTree = "<group>"; };
-		0A523D2615A98A400061997E /* CheckIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A523D2615A98A400061997E /* checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A523D2A15A98A400061997E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0A523D2C15A98A400061997E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A523D2E15A98A400061997E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				C309A8F7163FE4C1008A5CFD /* AppConfig.h */,
-				0A29256716318BA500E00CFE /* CheckIn-Info.plist */,
-				0A29256816318BA500E00CFE /* CheckIn-Prefix.pch */,
+				0A29256716318BA500E00CFE /* checkin-Info.plist */,
+				0A29256816318BA500E00CFE /* checkin-Prefix.pch */,
 				0A29256916318BA500E00CFE /* InfoPlist.strings */,
 				0A29256D16318BA500E00CFE /* main.m */,
 				0A29256E16318BA500E00CFE /* Settings.bundle */,
@@ -148,7 +148,7 @@
 		0A523D2715A98A400061997E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A523D2615A98A400061997E /* CheckIn.app */,
+				0A523D2615A98A400061997E /* checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0A523D2515A98A400061997E /* CheckIn */ = {
+		0A523D2515A98A400061997E /* checkin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "CheckIn" */;
+			buildConfigurationList = 0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "checkin" */;
 			buildPhases = (
 				0A523D2215A98A400061997E /* Sources */,
 				0A523D2315A98A400061997E /* Frameworks */,
@@ -238,9 +238,9 @@
 			);
 			dependencies = (
 			);
-			name = CheckIn;
+			name = checkin;
 			productName = HelloWorld2;
-			productReference = 0A523D2615A98A400061997E /* CheckIn.app */;
+			productReference = 0A523D2615A98A400061997E /* checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = com.lunatech;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 0A523D2015A98A400061997E /* Build configuration list for PBXProject "CheckIn" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -264,7 +264,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0A523D2515A98A400061997E /* CheckIn */,
+				0A523D2515A98A400061997E /* checkin */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +344,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nicolas Leroux (N962FWY6V6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -359,6 +364,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "83B9CA1A-4DFD-4B35-8214-E600AA39E8A5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "83B9CA1A-4DFD-4B35-8214-E600AA39E8A5";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -369,6 +376,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nicolas Leroux (N962FWY6V6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -378,6 +390,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "83B9CA1A-4DFD-4B35-8214-E600AA39E8A5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "83B9CA1A-4DFD-4B35-8214-E600AA39E8A5";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -388,10 +402,10 @@
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/checkin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,10 +415,10 @@
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/CheckIn-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Classes/CheckIn-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/checkin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = checkin.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -421,7 +435,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "CheckIn" */ = {
+		0A523D5915A98A410061997E /* Build configuration list for PBXNativeTarget "checkin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0A523D5A15A98A410061997E /* Debug */,

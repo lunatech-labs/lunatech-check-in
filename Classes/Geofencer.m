@@ -78,10 +78,7 @@
 {
     NSLog(@" - Entered Region");
     NSLog(@" - Entered Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
-    if (isCheckIn != 1) {
-        
-        [self enteredRegion:0];
-    }
+   [self enteredRegion:0];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
@@ -89,10 +86,7 @@
     NSLog(@" - Exited Region viewController.status.text");
     NSLog(@" - Exited Region %@ \n Location %.06f %.06f",[region description], regionManager.location.coordinate.latitude,regionManager.location.coordinate.longitude );
     
-    if (isCheckIn != 0) {
-        
-        [self exitedRegion:0];
-    }
+    [self exitedRegion:0];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
@@ -135,18 +129,20 @@
     
     NSURLRequest *request = [ NSURLRequest requestWithURL: url ];
     
-    // create the connection with the request
-    // and start loading the data
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if (theConnection) {
-        // Create the NSMutableData to hold the received data.
-        // receivedData is an instance variable declared elsewhere.
-        [theConnection start];	
-    } else {
-        // Inform the user that the connection failed.
-        [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
+    if (isCheckIn != 1) {
+        // create the connection with the request
+        // and start loading the data
+        NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+        if (theConnection) {
+            // Create the NSMutableData to hold the received data.
+            // receivedData is an instance variable declared elsewhere.
+            [theConnection start];	
+        } else {
+            // Inform the user that the connection failed.
+            [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
+        }
+        isCheckIn = 1;
     }
-    isCheckIn = 1;
 }
 
 - (void) exitedRegion:(int)regionIndex
@@ -160,19 +156,21 @@
     
     NSURLRequest *request = [ NSURLRequest requestWithURL: url ];
     
-    // create the connection with the request
-    // and start loading the data
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    if (theConnection) {
-        // Create the NSMutableData to hold the received data.
-        // receivedData is an instance variable declared elsewhere.
-        [theConnection start];
-    } else {
-        // Inform the user that the connection failed.
-        [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
+    if (isCheckIn != 0) {
+        // create the connection with the request
+        // and start loading the data
+        NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+        if (theConnection) {
+            // Create the NSMutableData to hold the received data.
+            // receivedData is an instance variable declared elsewhere.
+            [theConnection start];
+        } else {
+            // Inform the user that the connection failed.
+            [[Notifier sharedNotifier] notifyMessage:[NSString stringWithFormat:@"Connection to server failed!"]];
 
+        }
+        isCheckIn = 0;
     }
-    isCheckIn = 0;
 }
 
 
